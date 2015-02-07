@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'devise'
+gem 'cancancan'
 gem 'omniauth-facebook'
 gem 'carrierwave', '0.9.0'
 gem 'rmagick'
