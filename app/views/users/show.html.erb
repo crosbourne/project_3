@@ -2,13 +2,13 @@
   <div>
     <h2>Hello <%#= @user.first_name%></h2>
   </div>
-  <!-- <div> -->
-    <%# if @user.user_avatar.present? %>
-      <%#= link_to image_tag(@user.user_avatar.thumb.url), @user.user_avatar.detail.url %>
-    <%# else %>
-      <%#= link_to image_tag("billshare_no_photo_small.jpg") %>
-    <%# end %>
-<!--  </div> -->
+  <div>
+    <% if @user.user_avatar.present? %>
+      <%= link_to image_tag(@user.user_avatar.thumb.url), @user.user_avatar.detail.url %>
+    <% else %>
+      <%= link_to image_tag("no_photo_small.jpg") %>
+    <% end %>
+ </div>
  <div>
   <%= link_to "Edit Profile", edit_user_path(@user) %>
   <%= link_to "Change Password", edit_user_registration_path %>
@@ -31,4 +31,4 @@
 
 
 
-<%#= link_to image_tag("fb_invite.png"), "#", :id => "invite_fb_friends" %>
+<%= link_to image_tag("fb_invite.png"), "#", :id => "invite_fb_friends" %>

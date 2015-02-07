@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root 'pages#home'
   get '/home' => 'pages#home'
 
-  
+  resources :users
   resources :pages
   resources :users, only: [:show, :index, :destroy] 
 
