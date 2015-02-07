@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def show
-
+    @user = User.find(params[:id])
   end
 
   def edit
@@ -16,6 +16,15 @@ class UsersController < ApplicationController
     @user.update(user_params)
     redirect_to(@user)
   end
+
+  def destroy
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to users_url, notice: 'user was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
 
   private
 

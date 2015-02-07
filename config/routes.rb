@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   
   resources :pages
+  resources :users, only: [:show, :index, :destroy] 
 
 
+ 
 end
