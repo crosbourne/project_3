@@ -1,6 +1,6 @@
 <div class="module">
   <div>
-    <h2>Hello <%#= @user.first_name%></h2>
+    <h2>Hello <%= @user.first_name%></h2>
   </div>
   <div>
     <% if @user.user_avatar.present? %>
@@ -10,25 +10,27 @@
     <% end %>
  </div>
  <div>
-  <%= link_to "Edit Profile", edit_user_path(@user) %>
-  <%= link_to "Change Password", edit_user_registration_path %>
+  <%= link_to "Edit Profile", edit_user_path(current_user)  %><br>
+  <%= link_to "Change Password", edit_user_registration_path %><br>
+  <%= link_to "Log out", destroy_user_session_path, method: :delete %><br>
 </div>  
 
   <script>
-//   $(function(){
-//     $("#invite_fb_friends").click(function(){
-//       FB.init({
-//         appId: '<%= ENV['FBAccessKeyId'] %>', 
-//         cookie: false,
-//         status: true
-//       });
-//       FB.ui({ method: 'apprequests', message: '<%= current_user %> thinks you are really awesome'})
-//     });
-//   });
+  $(function(){
+    $("#invite_fb_friends").click(function(){
+      FB.init({
+        appId: '<%= ENV['FBAccessKeyId'] %>', 
+        cookie: false,
+        status: true
+      });
+      FB.ui({ method: 'apprequests', message: '<%= current_user %> thinks you are really awesome'})
+    });
+  });
  </script>
 
 
 
-
-
 <%= link_to image_tag("fb_invite.png"), "#", :id => "invite_fb_friends" %>
+
+
+
