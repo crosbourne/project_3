@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get '/home' => 'pages#home'
+  get '/discover' => 'pages#discover'
+  get '/browse' => 'pages#browse'
+
 
   resources :users
   resources :pages

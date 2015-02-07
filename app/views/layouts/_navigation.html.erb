@@ -2,6 +2,8 @@
   <nav>
     <ul>
       <li><%= link_to 'Home', home_path %></li>
+      <li><%= link_to 'Discover', discover_path %></li>
+      <li><%= link_to 'Browse', browse_path %></li>
       <% if current_user %>
         <li><%= link_to "Profile", user_path(current_user) %></li>
         <li><%= link_to "Edit Profile", edit_user_path(current_user)  %></li>
