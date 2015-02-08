@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= @album.name %><br>
+  Created by:
+  <%= @album.user.try :name %>
+</p>
+
+<p>
+  <%= link_to image_tag(@album.album_image.thumb.url), @album.album_image.detail.url %>
+</p>
+
+
+
+<div class="white_text">
+<% @album.comics.each do |comic| %>
+  <%= link_to comic.name, comic %><br><br>
+<% end %>
+</div>
+
+
+<%= link_to 'Edit', edit_album_path(@album) if can? :edit, @album %> |
+<%= link_to 'Back', albums_path %>
+

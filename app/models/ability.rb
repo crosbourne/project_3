@@ -9,27 +9,20 @@ class Ability
     # guest user can read all 
     # guest user cannot create, edit, delete 
 
-    # if user.role? :admin
-    #   can :manage, :all
+    if user.role? :admin
+      can :manage, :all
 
-    # elsif user.role? :user
-    #   can :read, :all
-    #   cannot :create, Genre
-    #   cannot :edit, Genre
-    #   can :create, Album
-    #   can :edit, Album, user_id: user.id
-    #   can :destroy, Album, user_id: user.id 
-    #   can :create, Song
-    #   can :edit, Song, user_id: user.id
-    #   can :destroy, Song, user_id: user.id
-    #   can :create, Comment 
-    #   can :edit, Comment, user_id: user.id
-    #   can :destroy, Comment, user_id: user.id 
-    #   # cannot comment on own page
-    # else 
-    #   # guest
-    #   can :read, :all
-    # end
+    elsif user.role? :user
+      can :read, :all
+      can :create, :all
+      can :edit, Album, user_id: user.id
+      can :destroy, Album, user_id: user.id 
+      can :edit, Comic, user_id: user.id
+      can :destroy, Comic, user_id: user.id
+    else 
+      # guest
+      can :read, :all
+    end
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.

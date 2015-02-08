@@ -1,0 +1,33 @@
+<%= form_for(@album) do |f| %>
+<% if @album.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
+
+  <ul>
+    <% @album.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="field">
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</div>
+<div class="field">
+  <%= f.label :album_image %><br />
+  <%= f.file_field :album_image %>
+</div>
+
+
+<% Comic.all.each do |comic| %>
+<%= check_box_tag "album[comic_ids][]", comic.id, @album.comics.include?(comic), id: "album_ids_#{comic.id}" %>
+<%= f.label :comic_ids, comic.name, for: "album_ids_#{comic.id}" %>
+<% end %><br>
+
+<%= f.submit %><br>
+<% end %>
+
+
+

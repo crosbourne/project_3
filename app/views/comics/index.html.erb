@@ -1,0 +1,33 @@
+<h1>COMICS</h1>
+
+<nav>
+  <div class="row">
+    <div class="large-12 columns">
+      <ul class="large-block-grid-4">
+        <% @comics.each do |comic| %>
+
+        <li class="block-grid-item"> 
+          <div class="user_content">
+         
+            <%=link_to comic.name, comic %>
+
+            
+          </div>
+
+
+          <%= link_to image_tag(comic.comic_image.url), comic %>
+
+          <%= comic.user.name %>
+          <%#= link_to 'Show', comic %>
+          <%= link_to 'Edit', edit_comic_path(comic) if can? :edit, comic %>
+          <%= link_to 'Destroy', comic, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, comic)%>
+
+        <% end %>
+
+      </ul>
+    </div>
+  </div>  
+
+</nav>
+
+<%= link_to 'New Comic', new_comic_path if can? :create, Comic %>

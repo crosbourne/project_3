@@ -4,16 +4,21 @@
   </div>
   <div>
     <% if @user.user_avatar.present? %>
-      <%= link_to image_tag(@user.user_avatar.thumb.url), @user.user_avatar.detail.url %>
+    <%= link_to image_tag(@user.user_avatar.thumb.url), @user.user_avatar.detail.url %>
     <% else %>
-      <%= link_to image_tag("no_photo_small.jpg", height: '32', width: '32') %>
+    <%= link_to image_tag("no_photo_small.jpg", height: '32', width: '32') %>
     <% end %>
- </div>
- <div>
-  <%= link_to "Edit Profile", edit_user_path(current_user)  %><br>
-  <%= link_to "Change Password", edit_user_registration_path %><br>
-  <%= link_to "Log out", destroy_user_session_path, method: :delete %><br>
-</div>  
+  </div>
+  <div>
+    <%= link_to "Edit Profile", edit_user_path(current_user)  %><br>
+    <%= link_to "Change Password", edit_user_registration_path %><br>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete %><br>
+  </div>  
+
+  <div>
+    <%= link_to 'Add New Album', new_album_path %>
+    <%= link_to 'Add New Comic', new_comic_path %>
+  </div>
 
   <script>
   $(function(){
@@ -26,11 +31,11 @@
       FB.ui({ method: 'apprequests', message: '<%= current_user %> thinks you are really awesome'})
     });
   });
- </script>
+  </script>
 
 
 
-<%= link_to image_tag("fb_invite.png"), "#", :id => "invite_fb_friends" %>
+  <%= link_to image_tag("fb_invite.png"), "#", :id => "invite_fb_friends" %>
 
 
 

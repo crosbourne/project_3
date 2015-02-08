@@ -1,8 +1,13 @@
 class User < ActiveRecord::Base
+  has_many :comics
+  has_many :albums
+  accepts_nested_attributes_for :albums, allow_destroy: :false
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable,:omniauthable, omniauth_providers: [:facebook]
   mount_uploader :user_avatar, UserAvatarUploader
+
+  before_create :set_default_user_role
 
   def self.from_omniauth(auth)
     if user = User.find_by_email(auth.info.email)
@@ -24,5 +29,9 @@ class User < ActiveRecord::Base
      self.role.to_s == role_to_compare.to_s
    end
 
+   private
+   def set_default_user_role
+     self.role = "user" if self.role.nil?
+   end
   
 end

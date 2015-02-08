@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <!-- <strong>Name:</strong> -->
+  <%= @comic.name %>
+</p>
+
+<p>
+<!--   <strong>Image:</strong> -->
+  <%= link_to image_tag(@comic.comic_image.thumb.url), @comic.comic_image.detail.url %>
+</p>
+
+
+<p>
+ <!--  <strong>User:</strong> -->
+  <%= @comic.user.try(:email) %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_comic_path(@comic) if can? :edit, @comic %> |
+<%= link_to 'Back', comics_path %>
