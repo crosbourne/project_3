@@ -1,4 +1,4 @@
-class ComcisController < ApplicationController
+class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
@@ -70,6 +70,6 @@ class ComcisController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comic_params
-      params.require(:comic).permit(:name, :comic_image, :remote_comic_upload_url, :user_id)
+      params.require(:comic).permit(:name, :comic_image, :remote_comic_upload_url, :description, :user_id)
     end
 end

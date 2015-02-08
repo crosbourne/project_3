@@ -76,7 +76,8 @@ class AlbumsController < ApplicationController
       params.require(:album).permit(
         :name, 
         {:comic_ids => []},  
-        :album_image, 
+        :album_image,
+        :description, 
         :comic_id, 
         :user_id
         )
