@@ -20,8 +20,7 @@
 
 <% @issues.to_a.each do |issue| %>
 <%= issue.name %><br>
-<% raise %>
-<%= issue.description %><br>
+<%= issue.description.try(:html_safe) %><br>
 <%= image_tag(issue.image["icon_url"]) %>
 Issue #<%= issue.issue_number %><br>
 
