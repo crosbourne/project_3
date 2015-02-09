@@ -2,11 +2,10 @@ class PagesController < ApplicationController
   def home
   end
 
-  def browse
-  end
-
   def discover
   end
 
+  def browse
+  end
 
 end

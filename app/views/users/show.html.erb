@@ -20,22 +20,10 @@
     <%= link_to 'Add New Comic', new_comic_path %>
   </div>
 
-  <script>
-  $(function(){
-    $("#invite_fb_friends").click(function(){
-      FB.init({
-        appId: '<%= ENV['FBAccessKeyId'] %>', 
-        cookie: false,
-        status: true
-      });
-      FB.ui({ method: 'apprequests', message: '<%= current_user %> thinks you are really awesome'})
-    });
-  });
-  </script>
 
 
 
-  <%= link_to image_tag("fb_invite.png"), "#", :id => "invite_fb_friends" %>
+
 
 
 

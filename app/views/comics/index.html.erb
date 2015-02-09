@@ -17,7 +17,7 @@
 
           <%= link_to image_tag(comic.comic_image.url), comic %>
 
-          <%= comic.user.name %>
+          <%#= comic.user.name %>
           <%#= link_to 'Show', comic %>
           <%= link_to 'Edit', edit_comic_path(comic) if can? :edit, comic %>
           <%= link_to 'Destroy', comic, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, comic)%>
