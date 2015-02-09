@@ -11,7 +11,7 @@ class ComicsController < ApplicationController
   # GET /comics/1
   # GET /comics/1.json
   def show
-    @issues = ComicVine::API.issues
+    @issues = ComicVine::API.issues({limit: 5})
   end
 
   # GET /comics/new

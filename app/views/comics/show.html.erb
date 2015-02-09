@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+ <!--  <strong>User:</strong> -->
+  <%= @comic.user.try(:email) %>
+</p>
+
+<p>
   <!-- <strong>Name:</strong> -->
   <%= @comic.name %>
 </p>
@@ -11,20 +16,16 @@
 </p>
 
 
-<p>
- <!--  <strong>User:</strong> -->
-  <%= @comic.user.try(:email) %>
-</p>
-
-<p>
- <!--  <strong>User:</strong> -->
-  <%= @comic.user.try(:email) %>
-</p>
-
 <p> 
 
-<%=@issues.to_a.each do |issue| %>
-<%= link_to issue.name %>
+<% @issues.to_a.each do |issue| %>
+<%= issue.name %><br>
+<% raise %>
+<%= issue.description %><br>
+<%= image_tag(issue.image["icon_url"]) %>
+Issue #<%= issue.issue_number %><br>
+
+
 
 <% end %>
 </p>

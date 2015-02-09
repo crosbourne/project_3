@@ -10,14 +10,14 @@
     <% end %>
   </div>
   <div>
-    <%= link_to "Edit Profile", edit_user_path(current_user)  %><br>
+    <%= link_to "Edit Profile", edit_user_path  %><br>
     <%= link_to "Change Password", edit_user_registration_path %><br>
     <%= link_to "Log out", destroy_user_session_path, method: :delete %><br>
   </div>  
 
   <div>
-    <%= link_to 'Add New Album', new_album_path(current_user) %>
-    <%= link_to 'Add New Comic', new_comic_path(current_user) %>
+    <%= link_to 'Add New Album', new_album_path %>
+    <%= link_to 'Add New Comic', new_comic_path %>
   </div>
 
   <script>
