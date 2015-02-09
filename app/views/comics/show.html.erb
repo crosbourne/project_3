@@ -16,6 +16,19 @@
   <%= @comic.user.try(:email) %>
 </p>
 
+<p>
+ <!--  <strong>User:</strong> -->
+  <%= @comic.user.try(:email) %>
+</p>
+
+<p> 
+
+<%=@issues.to_a.each do |issue| %>
+<%= link_to issue.name %>
+
+<% end %>
+</p>
+
 
 
 <%= link_to 'Edit', edit_comic_path(@comic) if can? :edit, @comic %> |
