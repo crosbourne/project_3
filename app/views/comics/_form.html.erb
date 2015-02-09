@@ -19,6 +19,9 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
+  <div>
+    <%= f.number_field :issue_number, placeholder: "issue number?" %>
+  </div>
   <div class="field">
     <%= f.label :comic_image %><br />
     <%= f.file_field :comic_image %>
