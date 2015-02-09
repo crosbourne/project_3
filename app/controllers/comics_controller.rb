@@ -70,6 +70,6 @@ class ComicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comic_params
-      params.require(:comic).permit(:name, :comic_image, :remote_comic_upload_url, :description, :user_id)
+      params.require(:comic).permit(:name, :comic_image, :remote_comic_image_url, :description, :user_id)
     end
 end

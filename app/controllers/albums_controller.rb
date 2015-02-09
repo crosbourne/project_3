@@ -77,6 +77,7 @@ class AlbumsController < ApplicationController
         :name, 
         {:comic_ids => []},  
         :album_image,
+        :remote_album_image_url,
         :description, 
         :comic_id, 
         :user_id

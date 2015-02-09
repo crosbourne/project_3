@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable,:omniauthable, omniauth_providers: [:facebook]
   mount_uploader :user_avatar, UserAvatarUploader
 
-  before_create :set_default_user_role
+  before_save :set_default_user_role
 
   def self.from_omniauth(auth)
     if user = User.find_by_email(auth.info.email)

@@ -16,8 +16,8 @@
   </div>  
 
   <div>
-    <%= link_to 'Add New Album', new_album_path %>
-    <%= link_to 'Add New Comic', new_comic_path %>
+    <%= link_to 'Add New Album', new_album_path(current_user) %>
+    <%= link_to 'Add New Comic', new_comic_path(current_user) %>
   </div>
 
   <script>

@@ -16,13 +16,18 @@
   <%= f.text_field :name %>
 </div>
 <div class="field">
+  <%= f.label :description %><br />
+  <%= f.text_area :description %>
+</div>
+<div class="field">
   <%= f.label :album_image %><br />
   <%= f.file_field :album_image %>
 </div>
 <div class="field">
-<%= f.label :description %><br />
-<%= f.text_area :description %>
+  <%= f.label :remote_album_image_url %><br />
+  <%= f.text_field :remote_album_image_url %>
 </div>
+
 
 
 <% Comic.all.each do |comic| %>
