@@ -7,11 +7,8 @@
 
 <p>
   <!-- <strong>Name:</strong> -->
-  <%= @comic.name %>
-</p>
-
-<p>
-<!--   <strong>Image:</strong> -->
+  <%= @comic.name %><br>
+  <%= @comic.description %><br>
   <%= link_to image_tag(@comic.comic_image.thumb.url), @comic.comic_image.detail.url %>
 </p>
 
@@ -19,10 +16,12 @@
 <p> 
 
 <% @issues.to_a.each do |issue| %>
-<%= issue.name %><br>
+<%= issue.name %>
+<%# raise %>
 <%= issue.description.try(:html_safe) %><br>
-<%= image_tag(issue.image["icon_url"]) %>
+<%= image_tag(issue.image["thumb_url"]) %>
 Issue #<%= issue.issue_number %><br>
+
 
 
 
