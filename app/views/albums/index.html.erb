@@ -20,7 +20,7 @@
           <%#= album.user.name %>
           <%#= link_to 'Show', album %>
           <%= link_to 'Edit', edit_album_path(album) if can? :edit, album %>
-          <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, album)%>
+          <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, album) %>
 
         <% end %>
 

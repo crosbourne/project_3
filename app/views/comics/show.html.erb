@@ -1,9 +1,4 @@
-<p id="notice"><%= notice %></p>
 
-<p>
- <!--  <strong>User:</strong> -->
-  <%= @comic.user.try(:email) %>
-</p>
 
 <p>
   <!-- <strong>Name:</strong> -->
@@ -13,22 +8,7 @@
 </p>
 
 
-<p> 
-
-<% @issues.to_a.each do |issue| %>
-<%= issue.name %>
-<%# raise %>
-<%= issue.description.try(:html_safe) %><br>
-<%= image_tag(issue.image["thumb_url"]) %>
-Issue #<%= issue.issue_number %><br>
-
-
-
-
-<% end %>
-</p>
-
 
 
 <%= link_to 'Edit', edit_comic_path(@comic) if can? :edit, @comic %> |
-<%= link_to 'Back', comics_path %>
+<%= link_to 'Back', user_path(current_user)  %>

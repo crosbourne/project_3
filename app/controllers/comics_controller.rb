@@ -56,7 +56,7 @@ class ComicsController < ApplicationController
   # DELETE /comics/1
   # DELETE /comics/1.json
   def destroy
-    @song.destroy
+    @comic.destroy
     respond_to do |format|
       format.html { redirect_to comics_url, notice: 'Comic was successfully destroyed.' }
       format.json { head :no_content }

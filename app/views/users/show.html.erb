@@ -27,6 +27,8 @@
     <%= comic.name %><br>
     <%= comic.description %><br>
     <%= link_to image_tag(comic.comic_image.thumb.url), comic.comic_image.detail.url %>
+    <%= link_to 'Edit', edit_comic_path(comic) if can? :edit, comic %>
+    <%= link_to 'Destroy', comic, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, comic)%>
   </p>
   <% end %>
 
@@ -36,6 +38,8 @@
       <%= album.name %><br>
       <%= album.description %><br>
       <%= link_to image_tag(album.album_image.thumb.url), album.album_image.detail.url %>
+      <%= link_to 'Edit', edit_album_path(album) if can? :edit, album %>
+      <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, album)%>
     </p>
     <% end %>
 
