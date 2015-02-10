@@ -4,6 +4,7 @@
   <p>
     <!-- <strong>Name:</strong> -->
     <%= link_to album.name, album %><br>
+    <%= link_to album.heading %><br>
     <%= link_to image_tag(album.album_image.thumb.url), album.album_image.detail.url %>
   </p>
   <% end %>

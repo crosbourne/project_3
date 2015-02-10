@@ -81,7 +81,8 @@ class AlbumsController < ApplicationController
         :description, 
         :comic_id, 
         :user_id,
-        :heading
+        :heading,
+        :title
         )
     end
 end

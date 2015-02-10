@@ -37,6 +37,7 @@
     <p>
       <!-- <strong>Name:</strong> -->
       <%= link_to album.name, album %><br>
+      <%= link_to album.title %><br>
       <%= link_to image_tag(album.album_image.thumb.url), album %><br>
       <%= link_to 'Edit', edit_album_path(album) if can? :edit, album %>
       <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, album)%>

@@ -12,23 +12,21 @@
 <% end %>
 
 <div class="field">
-  <%= f.label :name %><br>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, placeholder: "Name of Collection" %>
 </div>
-  <%= f.label :heading %><br>
-  <%= f.text_field :heading %>
+  <%= f.text_field :heading, placeholder: "Collection Sub Heading" %><br><br>
 </div>
-<div class="field">
-  <%= f.label :description %><br />
-  <%= f.text_area :description %>
+  <%= f.text_field :title, placeholder: "Character Name" %><br><br>
 </div>
 <div class="field">
-  <%= f.label :album_image %><br />
+  <%= f.text_area :description, placeholder: "Description of Collection" %>
+</div> 
+<div class="field">
+  <%= f.label :album_image %><br>
   <%= f.file_field :album_image %>
 </div>
 <div class="field">
-  <%= f.label :remote_album_image_url %><br />
-  <%= f.text_field :remote_album_image_url %>
+  <%= f.text_field :remote_album_image_url, placeholder: "Web URL for Picture" %>
 </div>
 
 

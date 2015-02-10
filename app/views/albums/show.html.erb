@@ -1,6 +1,7 @@
 
 <p>
   <%= @album.name %><br>
+  <%= @album.title %><br>
   <%= link_to image_tag(@album.album_image.detail.url, height: '300', width: '500'), @album.album_image.detail.url %><br>
   <%= @album.name %><br>
   <%= @album.description %><br><br>

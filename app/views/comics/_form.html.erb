@@ -12,23 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, placeholder: "Name" %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.text_area :description, placeholder: "Description of collection" %>
   </div>
   <div>
-    <%= f.number_field :issue_number, placeholder: "issue number?" %>
+    <%= f.number_field :issue_number, placeholder: "issue number" %><br><br>
   </div>
   <div class="field">
-    <%= f.label :comic_image %><br />
+    <%= f.label :comic_image %><br>
     <%= f.file_field :comic_image %>
   </div>
   <div class="field">
-    <%= f.label :remote_comic_image_url %><br />
-    <%= f.text_field :remote_comic_image_url %>
+    <%= f.text_field :remote_comic_image_url, placeholder: "Web URL for Picture" %>
   </div>
 
 
