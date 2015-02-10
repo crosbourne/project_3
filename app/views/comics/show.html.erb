@@ -4,8 +4,8 @@
   <!-- <strong>Name:</strong> -->
   <%= @comic.name %><br>
   <%= @comic.description %><br>
-  <%= comic.issue_number %>
-  <%= link_to image_tag(@comic.comic_image.thumb.url), @comic.comic_image.detail.url %>
+  <%= link_to image_tag(@comic.comic_image.thumb.url), @comic.comic_image.detail.url %><br>
+  issue #<%= @comic.issue_number %><br>
 </p>
 
 

@@ -2,7 +2,9 @@
 <p>
   <%= @album.name %><br>
   <%= link_to image_tag(@album.album_image.detail.url, height: '300', width: '500'), @album.album_image.detail.url %><br>
-  <%= @album.description %>
+  <%= @album.name %><br>
+  <%= @album.description %><br><br>
+  <%= @album.heading %><br>
 </p>
 
 

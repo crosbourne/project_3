@@ -80,7 +80,8 @@ class AlbumsController < ApplicationController
         :remote_album_image_url,
         :description, 
         :comic_id, 
-        :user_id
+        :user_id,
+        :heading
         )
     end
 end
