@@ -16,8 +16,10 @@ class Ability
       can :read, :all
       can :create, :all
       can :edit, Album, user_id: user.id
+      can :update, Album, user_id: user.id
       can :destroy, Album, user_id: user.id 
       can :edit, Comic, user_id: user.id
+      can :update, Comic, user_id: user.id
       can :destroy, Comic, user_id: user.id
     else 
       # guest
