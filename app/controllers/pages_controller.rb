@@ -3,6 +3,9 @@ class PagesController < ApplicationController
   end
 
   def discover
+
+      @albums = Album.all
+  
   end
 
   def browse
