@@ -24,7 +24,7 @@
 <% @user.comics.each do |comic| %>
   <p>
     <!-- <strong>Name:</strong> -->
-    <%= comic.name %><br>
+    <%= link_to comic.name, comic %><br>
     <%= comic.description %><br>
     <%= link_to image_tag(comic.comic_image.thumb.url), comic.comic_image.detail.url %>
     <%= link_to 'Edit', edit_comic_path(comic) if can? :edit, comic %>
@@ -35,7 +35,7 @@
   <% @user.albums.each do |album| %>
     <p>
       <!-- <strong>Name:</strong> -->
-      <%= album.name %><br>
+      <%= link_to album.name, album %><br>
       <%= album.description %><br>
       <%= link_to image_tag(album.album_image.thumb.url), album.album_image.detail.url %>
       <%= link_to 'Edit', edit_album_path(album) if can? :edit, album %>

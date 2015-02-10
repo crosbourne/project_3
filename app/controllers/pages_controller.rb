@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   end
 
   def browse
-    @q = ComicVine::API.search 'volume', 'batman'
+    #@q = ComicVine::API.search 'volume', 'batman'
     #@issues = ComicVine::API.issues({limit: 10})
 
    
