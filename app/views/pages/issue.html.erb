@@ -1,0 +1,17 @@
+<h1>ISSUE</h1>
+
+
+
+      <p>
+
+        <% @issues.to_a.each do |issue| %>
+        <%= issue.name %>
+        <%#= issue.description.try(:html_safe) %><br>
+        <% if issue.image.present? %>
+        <%= image_tag(issue.image["small_url"], height: '160', width: '105') %><br>
+        <% else %>
+        <%= image_tag("no_comic_cover.jpg", height: '160', width: '105')  %><br>
+        <% end %>
+        Issue #<%= issue.issue_number %><br>
+        <% end %>
+        </p>

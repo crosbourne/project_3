@@ -7,16 +7,25 @@ class PagesController < ApplicationController
   end
 
   def browse
-    #@q = ComicVine::API.search 'volume', 'batman'
-    #@issues = ComicVine::API.issues({limit: 10})
-    # @issues = @q.result(distinct: true)
+  
+  end
+
+  def character
+    @characters = ComicVine::API.characters({limit: 10})
+  end
+
+  def issue
+    @issues = ComicVine::API.issues({limit: 10})
+  end
+
+  def movie
+    @movies = ComicVine::API.movies({limit: 10})
   end
 
 
   def search
      params[:search]
-     @issues = params[:search]
-    @results = ComicVine::API.search 'character,story_arc', params['search'], {:limit => 10}
+    @results = ComicVine::API.search 'volume,character,issues,movies', params['search'], {:limit => 20}
     render :browse
   end
 
