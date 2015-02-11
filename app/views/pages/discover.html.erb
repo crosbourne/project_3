@@ -5,6 +5,10 @@
     <!-- <strong>Name:</strong> -->
     <%= link_to album.name, album %><br>
     <%= link_to album.heading %><br>
-    <%= link_to image_tag(album.album_image.thumb.url), album.album_image.detail.url %>
+    <% if album.album_image.present? %>
+    <%= link_to image_tag(album.album_image.thumb.url), album %><br>
+    <% else %>
+    <%= link_to image_tag("no_photo_small.jpg", height: '100', width: '100'), album %><br>
+    <% end %>
   </p>
   <% end %>

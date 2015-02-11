@@ -5,7 +5,7 @@
   <%= @comic.name %><br>
   <%= @comic.description %><br>
   <% if @comic.comic_image.present? %>
-  <%= link_to image_tag(@comic.comic_image.thumb.url), @comic %><br>
+  <%= link_to image_tag(@comic.comic_image.url, height: '160', width: '105'), @comic %><br>
   <% else %>
   <%= link_to image_tag("no_photo_small.jpg", height: '160', width: '105'), @comic %><br>
   <% end %>

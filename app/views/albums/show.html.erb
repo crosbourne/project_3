@@ -4,7 +4,7 @@
   <%= @album.title %><br>
 
   <% if @album.album_image.present? %>
-  <%= link_to image_tag(@album.album_image.thumb.url), @album %><br>
+  <%= link_to image_tag(@album.album_image.url, height: '300', width: '500'), @album %><br>
   <% else %>
   <%= link_to image_tag("no_photo_small.jpg", height: '300', width: '500'), @album %><br>
   <% end %>
@@ -25,7 +25,7 @@
   <%= comic.description %><br>
 
   <% if comic.comic_image.present? %>
-  <%= link_to image_tag(comic.comic_image.thumb.url), comic %><br>
+  <%= link_to image_tag(comic.comic_image.thumb.url, height: '160', width: '105'), comic %><br>
   <% else %>
   <%= link_to image_tag("no_photo_small.jpg", height: '160', width: '105'), comic %><br>
   <% end %>
