@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/home' => 'pages#home'
   get '/discover' => 'pages#discover'
   get '/browse' => 'pages#browse'
+  get '/search' => 'pages#search'
 
 
   resources :users
