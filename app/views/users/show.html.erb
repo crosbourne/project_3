@@ -21,13 +21,19 @@
   </div>
 
 
-<% @user.comics.each do |comic| %>
+  <% @user.comics.each do |comic| %>
   <p>
     <!-- <strong>Name:</strong> -->
     <%= link_to comic.name, comic %><br>
     <%= comic.description %><br>
-    issue #<%= comic.issue_number %><br>
+
+    <% if comic.comic_image.present? %>
     <%= link_to image_tag(comic.comic_image.thumb.url), comic %><br>
+    <% else %>
+    <%= link_to image_tag("no_photo_small.jpg", height: '160', width: '105'), comic %><br>
+    <% end %>
+    issue #<%= comic.issue_number %><br>
+
     <%= link_to 'Edit', edit_comic_path(comic) if can? :edit, comic %>
     <%= link_to 'Destroy', comic, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, comic)%>
   </p>
@@ -38,7 +44,13 @@
       <!-- <strong>Name:</strong> -->
       <%= link_to album.name, album %><br>
       <%= link_to album.title %><br>
+
+      <% if album.album_image.present? %>
       <%= link_to image_tag(album.album_image.thumb.url), album %><br>
+      <% else %>
+      <%= link_to image_tag("no_photo_small.jpg", height: '100', width: '100'), album %><br>
+      <% end %>
+
       <%= link_to 'Edit', edit_album_path(album) if can? :edit, album %>
       <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, album)%>
     </p>
