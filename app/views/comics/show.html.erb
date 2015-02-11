@@ -4,7 +4,11 @@
   <!-- <strong>Name:</strong> -->
   <%= @comic.name %><br>
   <%= @comic.description %><br>
-  <%= link_to image_tag(@comic.comic_image.thumb.url), @comic.comic_image.detail.url %><br>
+  <% if @comic.comic_image.present? %>
+  <%= link_to image_tag(@comic.comic_image.thumb.url), @comic %><br>
+  <% else %>
+  <%= link_to image_tag("no_photo_small.jpg", height: '160', width: '105'), @comic %><br>
+  <% end %>
   issue #<%= @comic.issue_number %><br>
 </p>
 
