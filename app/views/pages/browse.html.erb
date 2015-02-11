@@ -8,12 +8,17 @@
 
 <p> 
 
-  <%= results.first.fetch %>
+  <%#= results.first.fetch %>
 
 <% @issues.to_a.each do |issue| %>
 <%= issue.name %>
-<%= issue.description.try(:html_safe) %><br>
-<%= image_tag(issue.image["thumb_url"]) %>
+<%#= issue.description.try(:html_safe) %><br>
+<% if issue.image.present? %>
+<%= image_tag(issue.image["thumb_url"]) %><br>
+<% else %>
+<%= image_tag("no_photo_small.jpg", height: '160', width: '105')  %><br>
+<% end %>
 Issue #<%= issue.issue_number %><br>
 <% end %>
 </p>
+
