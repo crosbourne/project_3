@@ -30,7 +30,7 @@
     <% if comic.comic_image.present? %>
     <%= link_to image_tag(comic.comic_image.thumb.url), comic %><br>
     <% else %>
-    <%= link_to image_tag("no_photo_small.jpg", height: '160', width: '105'), comic %><br>
+    <%= link_to image_tag("no_comic_cover.jpg", height: '160', width: '105'), comic %><br>
     <% end %>
     issue #<%= comic.issue_number %><br>
 
@@ -48,7 +48,7 @@
       <% if album.album_image.present? %>
       <%= link_to image_tag(album.album_image.thumb.url), album %><br>
       <% else %>
-      <%= link_to image_tag("no_photo_small.jpg", height: '100', width: '100'), album %><br>
+      <%= link_to image_tag("no_album_cover.jpg", height: '100', width: '100'), album %><br>
       <% end %>
 
       <%= link_to 'Edit', edit_album_path(album) if can? :edit, album %>
