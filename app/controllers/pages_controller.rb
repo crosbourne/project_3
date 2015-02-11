@@ -11,15 +11,15 @@ class PagesController < ApplicationController
   end
 
   def character
-    @characters = ComicVine::API.characters({limit: 10})
+    @characters = ComicVine::API.characters({limit: 20})
   end
 
   def issue
-    @issues = ComicVine::API.issues({limit: 10})
+    @issues = ComicVine::API.issues({limit: 20})
   end
 
   def movie
-    @movies = ComicVine::API.movies({limit: 10})
+    @movies = ComicVine::API.movies({limit: 20})
   end
 
 

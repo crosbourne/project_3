@@ -8,9 +8,9 @@
         <%= character.name %>
         <%#= character.description.try(:html_safe) %><br>
         <% if character.image.present? %>
-        <%= image_tag(character.image["small_url"], height: '160', width: '105') %><br>
+        <%= image_tag(character.image["small_url"], height: '160', width: '110') %><br>
         <% else %>
-        <%= image_tag("no_comic_cover.jpg", height: '160', width: '105')  %><br>
+        <%= image_tag("no_comic_cover.jpg", height: '160', width: '110')  %><br>
         <% end %>
         <% end %>
         </p>

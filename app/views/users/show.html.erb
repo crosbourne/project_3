@@ -4,7 +4,7 @@
   </div>
   <div>
     <% if @user.user_avatar.present? %>
-    <%= link_to image_tag(@user.user_avatar.thumb.url), @user.user_avatar.detail.url %>
+    <%= link_to image_tag(@user.user_avatar.url, height: '32', width: '32'), @user.user_avatar.detail.url %>
     <% else %>
     <%= link_to image_tag("no_photo_small.jpg", height: '32', width: '32') %>
     <% end %>
@@ -28,9 +28,9 @@
     <%= comic.description %><br>
 
     <% if comic.comic_image.present? %>
-    <%= link_to image_tag(comic.comic_image.thumb.url), comic %><br>
+    <%= link_to image_tag(comic.comic_image.url, height: '160', width: '110'), comic %><br>
     <% else %>
-    <%= link_to image_tag("no_comic_cover.jpg", height: '160', width: '105'), comic %><br>
+    <%= link_to image_tag("no_comic_cover.jpg", height: '160', width: '110'), comic %><br>
     <% end %>
     issue #<%= comic.issue_number %><br>
 
@@ -46,9 +46,9 @@
       <%= link_to album.title %><br>
 
       <% if album.album_image.present? %>
-      <%= link_to image_tag(album.album_image.thumb.url), album %><br>
+      <%= link_to image_tag(album.album_image.url, height: '110', width: '110'), album %><br>
       <% else %>
-      <%= link_to image_tag("no_album_cover.jpg", height: '100', width: '100'), album %><br>
+      <%= link_to image_tag("no_album_cover.jpg", height: '110', width: '110'), album %><br>
       <% end %>
 
       <%= link_to 'Edit', edit_album_path(album) if can? :edit, album %>
