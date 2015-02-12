@@ -42,6 +42,7 @@
   <% @user.albums.each do |album| %>
     <p>
       <!-- <strong>Name:</strong> -->
+      <%= album.comics.size %> items<br>
       <%= link_to album.name, album %><br>
       <%= link_to album.title %><br>
 

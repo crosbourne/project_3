@@ -10,6 +10,10 @@ class PagesController < ApplicationController
   
   end
 
+  def volume
+    @volumes = ComicVine::API.volumes({limit: 20})
+  end
+
   def character
     @characters = ComicVine::API.characters({limit: 20})
   end
@@ -22,11 +26,27 @@ class PagesController < ApplicationController
     @movies = ComicVine::API.movies({limit: 20})
   end
 
-
   def search
-     params[:search]
-    @results = ComicVine::API.search 'volume,character,issues,movies', params['search'], {:limit => 20}
-    render :browse
+    if !params[:movies].nil? && params['search'].empty?
+      @results = @movies = ComicVine::API.movies({limit: 20})
+   
+    elsif !params[:characters].nil? && params['search'].empty?
+      @results = @characters = ComicVine::API.characters({limit: 20})
+  
+    elsif !params[:issues].nil? && params['search'].empty?
+      @results = @issues = ComicVine::API.issues({limit: 20})
+    
+    elsif !params[:volume].nil? && params['search'].empty?
+      @results = @volumes = ComicVine::API.volumes({limit: 20})
+    
+    else 
+      terms = [params[:movies],params[:characters],params[:issues],params[:volumes]].compact.join(",")
+
+      @results = ComicVine::API.search terms, params['search'], {:limit => 20}
+      render :browse
+      #raise
+    end
+    
   end
 
 end

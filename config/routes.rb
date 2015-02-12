@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/character' => 'pages#character'
   get '/movie' => 'pages#movie'
   get '/issue' => 'pages#issue'
+  get '/volume' => 'pages#volume'
 
 
   resources :users
