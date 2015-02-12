@@ -1,0 +1,20 @@
+<h1>Volume</h1>
+
+
+<button class="A-F">A-F,#</button>
+<button class="G-F">G-F</button>
+<button class="M-R">M-R</button>
+<button class="S-Z">S-Z</button>
+
+      <p>
+
+        <% @volumes.to_a.each do |volume| %>
+        <%= volume.name %>
+        <%#= volume.description.try(:html_safe) %><br>
+        <% if volume.image.present? %>
+        <%= image_tag(volume.image["small_url"], height: '160', width: '110') %><br>
+        <% else %>
+        <%= image_tag("no_comic_cover.jpg", height: '160', width: '110')  %><br>
+        <% end %>
+        <% end %>
+        </p>

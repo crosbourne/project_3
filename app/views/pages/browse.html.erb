@@ -1,3 +1,6 @@
+
+<div class="container">
+     <a href><%= link_to "Character", character_path,  class: "slide_page" %></a>
 <h1>BROWSE</h1>
 
 
@@ -6,13 +9,14 @@
     <li><%= link_to 'Issue', issue_path %></li>
     <li><%= link_to 'Character', character_path %></li>
     <li><%= link_to 'movie', movie_path %></li>
+    <li><%= link_to 'volume', volume_path %></li>
   </ul>
 </nav>
 
 <form action="/search" method="get">
   <input name="search" type="search"> 
 
-  <input name="volume" type="checkbox" value="volume">Volume 
+  <input name="volumes" type="checkbox" value="volumes">Volume 
   <input name="movies" type="checkbox" value="movies">Movies 
   <input name="characters" type="checkbox" value="characters">Characters 
   <input name="issues" type="checkbox" value="issues">Issue 
@@ -36,6 +40,6 @@
 <% end %>
 
 
-
+</div>
 
 
