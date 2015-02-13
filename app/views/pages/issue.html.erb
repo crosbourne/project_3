@@ -1,11 +1,12 @@
 <h1>ISSUE</h1>
 
 
-
+<%#= @issues.next_page  %>
+<%= @issues.prev_page  %>
 
       <p>
 
-        <% @issues.to_a.each do |issue| %>
+        <% @issues.next_page.to_a.each do |issue| %>
         <%= issue.name %>
         <%#= issue.description.try(:html_safe) %><br>
         <% if issue.image.present? %>

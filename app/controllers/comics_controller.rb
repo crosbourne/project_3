@@ -2,6 +2,15 @@ class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
+
+  def for_bubbles
+    @comics_hash = Comic.all.map do |comic|
+      { name: comic.name, issue_count: comic.issue_number }
+    end
+
+    render json: @comics_hash
+  end
+
   # GET /comics
   # GET /comics.json
   def index
