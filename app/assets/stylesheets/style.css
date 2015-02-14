@@ -1,5 +1,10 @@
-
+html {
+    position: relative;
+    min-height: 100%;
+}
 body {
+    margin: 0 0 100px; /* bottom = footer height */
+    padding: 25px;
 }
 
 header {
@@ -9,9 +14,15 @@ header {
   margin-right: auto;
 }
 
-.blank {
-  background-color: white;
-  padding-bottom: 430px
+
+footer {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    overflow:hidden;
 }
 
 nav ul{
@@ -22,7 +33,6 @@ nav ul{
 }
 
 nav ul li{
-  /*margin-bottom: 10px;*/
   display: inline-block;
   background-color: white;
   padding: 10px;
