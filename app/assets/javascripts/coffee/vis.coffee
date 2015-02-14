@@ -4,7 +4,7 @@ root = exports ? this
 Bubbles = () ->
   # standard variables accessible to
   # the rest of the functions inside Bubbles
-  width = 1000
+  width = 1200
   height = 450
   data = []
   node = null

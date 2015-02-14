@@ -9,14 +9,20 @@ header {
   margin-right: auto;
 }
 
+.blank {
+  background-color: white;
+  padding-bottom: 430px
+}
+
 nav ul{
+
   text-align: center;
   margin-right: auto;
   margin-left: auto;
 }
 
 nav ul li{
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
   display: inline-block;
   background-color: white;
   padding: 10px;
@@ -33,7 +39,12 @@ a, a:visited {
 
 #vis {
   overflow: hidden;
-  position: relative;
+  text-align: center;
+  position: absolute;
+
+  margin-left: 200px;
+  margin-right: 100px;
+  right:0;
 }
 
 #bubble-background {
@@ -41,9 +52,10 @@ a, a:visited {
   pointer-events: all;
 }
 
+/*bubbles background-color*/
 .bubble-node {
   /* fill: #d1e0f3; */
-  fill: #DCE9BE;
+  fill: black;
 }
 
 .bubble-hover {
@@ -65,7 +77,7 @@ a, a:visited {
 
 a.bubble-label {
   font-family: georgia, "times new roman", times, serif;
-  color: inherit;
+  color: white;
   cursor: pointer;
   display: block;
   text-align: center;
