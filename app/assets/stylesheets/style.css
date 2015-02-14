@@ -2,26 +2,28 @@
 body {
 }
 
-a, a:visited {
-  color:#333;
-}
-
-#container {
-  padding-top:20px;
-  width: 980px;
-  border-left: 2px #ddd solid;
-  border-right: 2px #ddd solid;
-}
-
 header {
+  margin-top: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav ul{
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+nav ul li{
+  margin-bottom: 10px;
+  display: inline-block;
+  background-color: white;
   padding: 10px;
 }
 
-#book-title {
-  font-family: georgia, "times new roman", times, serif;
-  color: #555;
-  font-size: 2.3em;
-  text-align: center;
+a, a:visited {
+  color:#333;
 }
 
 #text-select {
@@ -32,17 +34,6 @@ header {
 #vis {
   overflow: hidden;
   position: relative;
-}
-
-#status {
-  padding:0 0 20px 20px;
-}
-
-#controls {
-  padding: 20px;
-  background-color: #eee;
-  margin: 10px;
-  width: 350px;
 }
 
 #bubble-background {
@@ -89,10 +80,5 @@ a.bubble-label {
   white-space: nowrap;
 }
 
-footer p {
-  text-align: center;
-  padding-top:20px;
-  padding-bottom:20px;
-  font: 13px sans-serif;
-}
+
 
