@@ -1,6 +1,5 @@
-<header class="top">
 <h1>DISCOVER</h1>
-</header>
+
 
 
 <% @albums.each do |album| %>
@@ -12,7 +11,7 @@
     <% if album.album_image.present? %>
     <%= link_to image_tag(album.album_image.url, height: '110', width: '110'), album %><br>
     <% else %>
-    <%= link_to image_tag("no_photo_small.jpg", height: '110', width: '110'), album %><br>
+    <%= link_to image_tag("no_album_cover.jpg", height: '110', width: '110'), album %><br>
     <% end %>
   </p>
   <% end %>

@@ -1,12 +1,11 @@
+<h1>Hello <%= @user.first_name%></h1>
+
+
 <div class="module">
-  <div>
-    <h2>Hello <%= @user.first_name%></h2>
-  </div>
-  <div>
     <% if @user.user_avatar.present? %>
-    <%= link_to image_tag(@user.user_avatar.url, height: '32', width: '32'), @user.user_avatar.detail.url %>
+    <%= link_to image_tag(@user.user_avatar.url, height: '60', width: '60'), @user.user_avatar.detail.url %>
     <% else %>
-    <%= link_to image_tag("log_out.jpg", height: '32', width: '32') %>
+    <%= link_to image_tag("log_out.jpg", height: '60', width: '60') %>
     <% end %>
   </div>
   <div>
