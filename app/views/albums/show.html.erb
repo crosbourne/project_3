@@ -1,13 +1,12 @@
 <h1> <%= @album.name %></h1>
 
 <p>
-  <%= @album.name %><br>
-  <%= @album.title %><br>
+  <%= @album.title %>
 
   <% if @album.album_image.present? %>
-  <%= link_to image_tag(@album.album_image.url, height: '300', width: '500'), @album %><br>
+  <%= link_to image_tag(@album.album_image.url, height: '110', width: '110', class: "album_splash"), @album %><br>
   <% else %>
-  <%= link_to image_tag("no_album_splash.jpg", height: '300', width: '500'), @album %><br>
+  <%= link_to image_tag("no_album_splash.jpg", height: '500', width: '1000', class: "album_splash"), @album %><br>
   <% end %>
 
   <%= @album.name %><br>
