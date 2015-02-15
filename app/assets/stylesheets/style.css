@@ -105,9 +105,12 @@ a.bubble-label {
   white-space: nowrap;
 }
 
-
+/*************
+* TOP BLACK BAR *
+*************/
 
 h1 {
+  z-index: 0;
   position: fixed;
   top:0;
   background-color: black;
@@ -117,6 +120,15 @@ h1 {
   padding: 10px; 
   margin: 0 auto;
 }
+
+.back {
+  z-index: 1;
+  position: fixed;
+  top:10px;
+  left: 20px;
+}
+
+
 /*************
 * ALBUM *
 *************/

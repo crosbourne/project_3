@@ -1,12 +1,12 @@
-<div>
+<%= link_to image_tag("back.png", height: '30', width: '30', class: "back"), discover_path %>
 <h1> <%= @album.name %></h1>
-</div>
+
 
 <p>
   <% if @album.album_image.present? %>
-  <%= link_to image_tag(@album.album_image.url, height: '400', width: '1000', class: "album_splash"), @album %>
+  <%= image_tag(@album.album_image.url, height: '400', width: '1000', class: "album_splash") %>
   <% else %>
-  <%= link_to image_tag("no_album_splash.jpg", height: '300', width: '1000', class: "album_splash"), @album %>
+  <%= image_tag("no_album_splash.jpg", height: '300', width: '1000', class: "album_splash") %>
   <% end %>
 </p>
 
@@ -43,5 +43,5 @@
   </div>
 </div>
 
-<%= link_to 'Back', discover_path  %>
+
 
