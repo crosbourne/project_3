@@ -209,8 +209,37 @@ p {
   text-align: center;
 
 }
+/*************
+* BROWSE BAR *
+*************/
+input[type=search] {
+  width: 150px;
+  padding:5px; 
+  border:2px solid #ccc; 
+  border-radius: 10px;
+  border-color:#333;
+  height: 20px;
 
+}
+input[type=checkbox] {
+  zoom:1.8;
+  border-radius: 50px;
+  margin-right: 2px;
+  margin-left: 2px;
+  border-color:white; 
+  vertical-align: middle;
+}
 
+input[type=submit] {
+  vertical-align: middle;
+  font-size: 15px;
+  height: 20px;
+  background: white; 
+  color: black;
+  border:0 none;
+  cursor:pointer;
+  border-radius: 5px; 
+}
 
 
 

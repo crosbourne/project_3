@@ -1,4 +1,11 @@
-<h1>BROWSE</h1><br><br>
+
+<h1><form action="/search" method="get">
+  <input name="search" type="search"> 
+  <input name="volumes" type="checkbox" value="volumes"> 
+  <input name="movies" type="checkbox" value="movies">
+  <input name="characters" type="checkbox" value="characters"> 
+  <input value="Search" type="submit">
+</form>  </h1>
 
 
  <div class="container1">
@@ -14,15 +21,7 @@
   </ul>
 </nav>
 
-<form action="/search" method="get">
-  <input name="search" type="search"> 
 
-  <input name="volumes" type="checkbox" value="volumes">Volume 
-  <input name="movies" type="checkbox" value="movies">Movies 
-  <input name="characters" type="checkbox" value="characters">Characters 
-<!--   <input name="issues" type="checkbox" value="issues">Issue  -->
-  <input value="Search" type="submit">
-</form>
 
 <% if @results %>
 <% @results.each do |result| %>
