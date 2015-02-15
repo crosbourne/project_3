@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150210214501) do
+ActiveRecord::Schema.define(version: 20150215143201) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 20150210214501) do
     t.integer "user_id"
     t.integer "album_id"
     t.integer "issue_number"
+    t.string  "comic_heading"
+    t.string  "bubble_name"
   end
 
   create_table "users", force: true do |t|
