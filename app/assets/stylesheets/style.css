@@ -114,13 +114,28 @@ h1 {
   color: white;
   width: 100%;
   text-align: center;
-  padding: 10px;
+  padding: 10px; 
   margin: 0 auto;
 }
 /*************
 * ALBUM *
 *************/
 .album_splash {
-    width: 100%;
-    height: 50%;
+  width: 100%;
+  height: 50%;
 }
+
+.album_blurb{
+  font-size: 25px;
+  background-color: black;
+  color: white;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 20px;
+  margin-top: -13px;
+
+}
+
+
+
+

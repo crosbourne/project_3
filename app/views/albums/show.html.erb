@@ -1,16 +1,19 @@
 <h1> <%= @album.name %></h1>
 
 <p>
-  <%= @album.title %>
-
   <% if @album.album_image.present? %>
-  <%= link_to image_tag(@album.album_image.url, height: '110', width: '110', class: "album_splash"), @album %><br>
+  <%= link_to image_tag(@album.album_image.url, height: '400', width: '1000', class: "album_splash"), @album %>
   <% else %>
-  <%= link_to image_tag("no_album_splash.jpg", height: '500', width: '1000', class: "album_splash"), @album %><br>
+  <%= link_to image_tag("no_album_splash.jpg", height: '300', width: '1000', class: "album_splash"), @album %>
   <% end %>
+</p>
 
-  <%= @album.name %><br>
+<p class="album_blurb">
+  <strong><%= @album.title %></strong><br>
   <%= @album.description %><br><br>
+</p>
+
+<p>
   <%= @album.heading %><br>
 </p>
 
