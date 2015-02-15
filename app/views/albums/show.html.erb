@@ -1,4 +1,6 @@
+<div>
 <h1> <%= @album.name %></h1>
+</div>
 
 <p>
   <% if @album.album_image.present? %>
@@ -24,20 +26,22 @@
 
 
 <% @album.comics.each do |comic| %>
-<p>
-  <!-- <strong>Name:</strong> -->
-  <%= link_to comic.name, comic %><br>
-  <%= comic.description %><br>
+<div class="comic_container">
+  <span>
+    <%= comic.description %><br>
+  </span>  
 
-
-  <% if comic.comic_image.present? %>
-  <%= link_to image_tag(comic.comic_image.url, height: '160', width: '105'), comic %><br>
-  <% else %>
-  <%= link_to image_tag("no_comic_cover.jpg", height: '160', width: '105'), comic %><br>
+  <div class="float_left">
+    <% if comic.comic_image.present? %>
+    <%= link_to image_tag(comic.comic_image.url, height: '160', width: '105'), comic %><br>
+    <% else %>
+    <%= link_to image_tag("no_comic_cover.jpg", height: '160', width: '105'), comic %><br>
+    <% end %>
+    <strong><%= comic.name %></strong><br>
+    issue #<%= comic.issue_number  %><br>
   <% end %>
-  issue #<%= comic.issue_number %><br>
-</p>
-<% end %>
+  </div>
+</div>
 
 <%= link_to 'Back', discover_path  %>
 

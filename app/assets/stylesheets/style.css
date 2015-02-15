@@ -145,10 +145,33 @@ p {
 
 .album_heading {
   font-size: 23px;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   padding-left: 20px;
 }
 
+/*************
+* COMIC *
+*************/
+
+.comic_container {
+  float: left;
+  padding-left: 20px;
+}
+
+/*comic text*/
+span {
+  text-decoration: none;
+  font-size: 20px;
+  padding-left: 10px;
+  float:right;
+}
+
+/*comic picture*/
+.float_left {
+  float: left;
+  text-align: center;
+}
 
 
 
