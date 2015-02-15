@@ -158,7 +158,6 @@ p {
 .album_heading {
   font-size: 23px;
   margin-top: 20px;
-  margin-bottom: 20px;
   padding-left: 20px;
 }
 
@@ -169,6 +168,7 @@ p {
 .comic_container {
   float: left;
   padding-left: 20px;
+  margin-top: 20px;
 }
 
 /*comic text*/
