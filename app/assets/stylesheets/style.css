@@ -128,6 +128,29 @@ h1 {
   left: 20px;
 }
 
+/*************
+* ALBUM PAGE *
+*************/
+
+.album_container {
+  float: left;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.album_float_right {
+  vertical-align: middle;
+  font-size: 20px;
+  float:right;
+  padding-left: 20px;
+}
+
+/*comic picture*/
+.album_float_left {
+  padding-left: 20px;
+  float: left;
+  text-align: center;
+}
 
 /*************
 * ALBUM *
@@ -162,7 +185,7 @@ p {
 }
 
 /*************
-* COMIC *
+* ALBUM COMIC *
 *************/
 
 .comic_container {
@@ -172,18 +195,26 @@ p {
 }
 
 /*comic text*/
-span {
-  text-decoration: none;
+.right{
   font-size: 20px;
-  padding-left: 10px;
+  padding-right: 10px;
   float:right;
+
 }
 
 /*comic picture*/
-.float_left {
+.left {
+
   float: left;
   text-align: center;
+
 }
+
+
+
+
+
+
 
 
 

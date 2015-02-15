@@ -27,12 +27,13 @@
 
 <% @album.comics.each do |comic| %>
 <div class="comic_container">
-  <span>
+  <div class="right">
     <strong><%= comic.comic_heading %></strong><br>
     <%= comic.description %><br>
-  </span>  
+  </div>  
+  <div style="display: block; clear: both;"></div>
 
-  <div class="float_left">
+  <div class="left">
     <% if comic.comic_image.present? %>
     <%= link_to image_tag(comic.comic_image.url, height: '160', width: '105'), comic %><br>
     <% else %>

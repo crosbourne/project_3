@@ -1,17 +1,29 @@
 <h1>DISCOVER</h1>
 
-
+<%#= album.comics.size %> <!-- items<br> -->
 
 <% @albums.each do |album| %>
-  <p>
-    <!-- <strong>Name:</strong> -->
-    <%= album.comics.size %> items<br>
-    <%= link_to album.name, album %><br>
-    <%= link_to album.heading %><br>
-    <% if album.album_image.present? %>
-    <%= link_to image_tag(album.album_image.url, height: '110', width: '110'), album %><br>
-    <% else %>
-    <%= link_to image_tag("no_album_cover.jpg", height: '110', width: '110'), album %><br>
-    <% end %>
-  </p>
-  <% end %>
+  <div class="album_container">
+    <div class="album_float_right">
+      <strong><%= album.name %></strong> <br>
+      <%= album.comics.size %> items <br>
+      <%#= album.heading %> <br>
+  </div>
+
+    
+      <% if album.album_image.present? %>
+      <%= link_to image_tag(album.album_image.url, height: '110', width: '110', class: "album_float_left"), album %><br>
+      <% else %>
+      <%= link_to image_tag("no_album_cover.jpg", height: '110', width: '110', class: "album_float_left"), album %><br>
+      <% end %>
+      <% end %>
+    
+  </div>
+
+
+
+
+
+
+
+ 
