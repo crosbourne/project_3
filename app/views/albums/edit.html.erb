@@ -1,6 +1,9 @@
+<%= link_to image_tag("back.png", height: '30', width: '30', class: "back"), user_path(current_user) %> 
 <h1>EDIT ALBUM</h1>
 
+<div class="module">
 <%= render 'form' %>
+</div>
 
 
-<%= link_to 'Back', user_path(current_user)  %>
+

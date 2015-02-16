@@ -5,7 +5,7 @@ class ComicsController < ApplicationController
 
   def for_bubbles
     @comics_hash = Comic.all.map do |comic|
-      {name: comic.bubble_name, word: comic.bubble_name, count: comic.bubble_number }
+      {name: comic.bubble_name, word: comic.bubble_name, count: comic.bubble_number.to_i }
     end
 
     render json: @comics_hash

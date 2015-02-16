@@ -405,7 +405,7 @@ root.plotData = (selector, data, plot) ->
     .call(plot)
 
 texts = [
-  {key:"sherlock",file:"top_sherlock.csv",url:"/comics/for_bubbles",name:"",word:"",count""}
+  { url:"/comics/for_bubbles",name:"",word:"",count:""}
 ]
 
 # ---
