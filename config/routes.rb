@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/movie' => 'pages#movie'
   get '/issue' => 'pages#issue'
   get '/volume' => 'pages#volume'
+  get '/volume' => 'pages#volume'
+  get '/comics/for_bubbles' => 'comics#for_bubbles'
 
 
   resources :users

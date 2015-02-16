@@ -1,11 +1,11 @@
 class ComicsController < ApplicationController
   before_action :set_comic, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource
+  load_and_authorize_resource except: [:for_bubbles]
 
 
   def for_bubbles
     @comics_hash = Comic.all.map do |comic|
-      { name: comic.name, issue_count: comic.issue_number }
+      {name: comic.bubble_name, word: comic.bubble_name, count: comic.bubble_number }
     end
 
     render json: @comics_hash
@@ -80,6 +80,6 @@ class ComicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comic_params
-      params.require(:comic).permit(:name, :issue_number, :comic_image, :comic_heading, :bubble_name, :remote_comic_image_url, :description, :user_id)
+      params.require(:comic).permit(:name, :issue_number, :comic_image, :comic_heading, :bubble_number, :bubble_name, :remote_comic_image_url, :description, :user_id)
     end
 end

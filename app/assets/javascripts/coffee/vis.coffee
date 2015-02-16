@@ -405,7 +405,7 @@ root.plotData = (selector, data, plot) ->
     .call(plot)
 
 texts = [
-  {key:"sherlock",file:"top_sherlock.csv",url:"/comics/for_bubbles",name:""}
+  {key:"sherlock",file:"top_sherlock.csv",url:"/comics/for_bubbles",name:"",word:"",count""}
 ]
 
 # ---
@@ -452,5 +452,5 @@ $ ->
   d3.select("#book-title").html(text.name)
 
   # load our data
-  d3.csv("data/#{text.file}", display)
+  d3.json(text.url, display)
 
