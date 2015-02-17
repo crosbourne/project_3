@@ -3,18 +3,41 @@ $module-background: white; //#dadada;
 $module-border-color: #00395d; // #39a299;
 $button-background-color: #007eb6;
 $button-background-color-hover: #006896; //#00a0e7; 
-$site-width: 960px;
 $border-radius: 5px;
-$margin-auto: 0 auto;
 
 .module {
   background-color: $module-background;
-  width: 100%;
-  float: left;
   -webkit-border-radius: $border-radius;
   border-radius: $border-radius;
   text-align: center;
   padding: $padding;
+  label {
+    display: block;
+    line-height: 1.5;
+  }
+
+  form {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  input, textarea, select, {
+    border: 2px solid $module-border-color;
+    -webkit-border-radius: $border-radius;
+    border-radius: $border-radius;
+    background: white;
+    color: black;
+    font-size: 14px;
+    display: block;
+    padding: $padding;
+    margin-left: auto;
+    margin-right: auto;
+
+    }
+
+  select {
+    height: 50px;
+  }
 }
 
 
@@ -119,6 +142,100 @@ li:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
+/*************
+* SIGN IN CHECKBOX TOOL TIP *
+*************/
+
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltip1] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltip1]:before,
+[data-tooltip1]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  transition:0.5s;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltip1]:before {
+  position: absolute;
+  bottom: 80%;
+  left: 50%;
+  margin-left: -30px;
+  padding: 2px;
+  width: 50px;
+ 
+  color: black;
+  content: attr(data-tooltip1);
+  text-align: center;
+  font-size: 8px;
+  line-height: -10px;
+  z-index: 15;
+}
+
+/* Show tooltip content on hover */
+[data-tooltip1]:hover:before,
+[data-tooltip1]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/*************
+* BROWSE TOOL TIP *
+*************/
+/* Add this attribute to the element that needs a tooltip */
+[data-tooltipa] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Hide the tooltip content by default */
+[data-tooltipa]:before,
+[data-tooltipa]:after {
+  visibility: hidden;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  transition:0.5s;
+  pointer-events: none;
+}
+
+/* Position tooltip above the element */
+[data-tooltipa]:before {
+  position: absolute;
+  bottom: 80%;
+  left: 50%;
+  margin-left: -30px;
+  padding: 2px;
+  width: 50px;
+ 
+  color: white;
+  content: attr(data-tooltipa);
+  text-align: center;
+  font-size: 8px;
+  line-height: -10px;
+  z-index: 15;
+}
+
+/* Show tooltip content on hover */
+[data-tooltipa]:hover:before,
+[data-tooltipa]:hover:after {
+  visibility: visible;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
 
 /*************
 * BUBBLE CLOUD *
@@ -303,11 +420,11 @@ input[type=search] {
   vertical-align: middle;
 
 }
-input[type=checkbox] {
+input[type=checkbox]  {
   zoom:1.8;
   border-radius: 50px;
-  margin-right: 2px;
-  margin-left: 2px;
+  margin-right: auto;
+  margin-left: auto;
   vertical-align: middle;
   background-color: black;
 }
@@ -315,10 +432,11 @@ input[type=checkbox] {
 input[type=submit] {
   vertical-align: middle;
   font-size: 15px;
-  height: 20px;
+  // height: 20px;
   background: black; 
   color: white;
   border:0 none;
+  padding: auto;
   cursor:pointer;
   border-radius: 5px; 
 }
