@@ -13,7 +13,7 @@
 
       </li>
       <% if current_user %>
-        <li><%= link_to image_tag("log_out.jpg", height: '50', width: '50'), user_path(current_user), class: 'Log_out', data: {tooltip: 'Log_out'}  %>
+        <li><%= link_to image_tag("log_out.jpg", height: '50', width: '50'), user_path(current_user), class: 'Profile', data: {tooltip: 'Profile'}  %>
 
         </li>
       <% else %>
