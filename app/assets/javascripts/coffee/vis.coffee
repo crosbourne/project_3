@@ -452,5 +452,6 @@ $ ->
   d3.select("#book-title").html(text.name)
 
   # load our data
-  d3.json(text.url, display)
+  userId = $("#vis").data('userId')
+  d3.json(text.url+'?user_id='+userId, display)
 

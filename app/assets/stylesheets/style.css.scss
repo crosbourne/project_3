@@ -74,6 +74,11 @@ li:hover {
 /*************
 * MENU BAR TOOL TIP *
 *************/
+#menu .home{
+  background: url("../images/redo.png") center no-repeat;
+    background-size: 100%;
+    cursor: pointer;
+} /*use blank png*/
 
 /* Add this attribute to the element that needs a tooltip */
 [data-tooltip] {
@@ -102,10 +107,10 @@ li:hover {
   padding: 7px;
   width: 50px;
  
-  color: black;
+  color: red;
   content: attr(data-tooltip);
   text-align: center;
-  font-size: 14px;
+  font-size: 100px;
   line-height: 1.2;
 }
 
@@ -292,13 +297,12 @@ p {
 *************/
 input[type=search] {
   font-size: 15px;
-  height: 20px;
+  height: 15px;
   width: 150px;
   padding:5px; 
   border:2px solid #ccc; 
   border-radius: 10px;
   border-color:#333;
-  height: 20px;
   vertical-align: middle;
 
 }
