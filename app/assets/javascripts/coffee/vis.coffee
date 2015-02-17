@@ -28,6 +28,8 @@ Bubbles = () ->
   #   for your own
   idValue = (d) -> d.name
 
+  comicId = (d) -> d.comic_id
+
   # function to define what to display in each bubble
   #  again, abstracted to ease migration to 
   #  a different dataset if desired
@@ -204,7 +206,9 @@ Bubbles = () ->
     # is easier to append multiple elements to this selection
     labelEnter = label.enter().append("a")
       .attr("class", "bubble-label")
+      .attr("id", (d) -> "comic_" + comicId(d))
       .attr("href", (d) -> "##{encodeURIComponent(idValue(d))}")
+      .attr("data-comic-id", (d) -> comicId(d))
       .call(force.drag)
       .call(connectEvents)
 
@@ -307,6 +311,7 @@ Bubbles = () ->
   # ---
   connectEvents = (d) ->
     d.on("click", click)
+    d.on("dblclick", dblclick)
     d.on("mouseover", mouseover)
     d.on("mouseout", mouseout)
 
@@ -322,6 +327,12 @@ Bubbles = () ->
   click = (d) ->
     location.replace("#" + encodeURIComponent(idValue(d)))
     d3.event.preventDefault()
+  # ---
+  # changes double clicked bubble by modifying url
+  # ---
+  dblclick = (d) ->
+  #code to take you comic/id
+    window.location = '/comics/' + d.comic_id;
 
   # ---
   # called when url after the # changes

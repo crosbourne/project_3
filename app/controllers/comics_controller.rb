@@ -9,7 +9,7 @@ class ComicsController < ApplicationController
     comics = @user ? @user.comics : Comic.all
 
     @comics_hash = comics.map do |comic|
-      {name: comic.bubble_name, word: comic.bubble_name, count: comic.bubble_number.to_i }
+      {name: comic.bubble_name, word: comic.bubble_name, count: comic.bubble_number.to_i, comic_id: comic.id}
     end
 
     render json: @comics_hash
