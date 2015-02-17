@@ -12,6 +12,10 @@ class PagesController < ApplicationController
   
   end
 
+  def about
+  
+  end
+
   def volume
     @volumes = ComicVine::API.volumes({limit: 20})
   end

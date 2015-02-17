@@ -17,11 +17,18 @@
       <% end %>
     </end>
     <strong><%= @comic.name %></strong><br>
-    issue #<%= @comic.issue_number  %><br>
+    issue #<%= @comic.issue_number  %><br><br>
   </div>
 </div>
 
+<%#= @comic.album.album_image.url %>
 
+<p>
 
-
-
+  <% if @comic.album.album_image.present? %>
+  <%= link_to image_tag(@album.album_image.url, height: '110', width: '110'), @comic.album %><br>
+  <% else %>
+  <%= link_to image_tag("no_album_cover.jpg", height: '110', width: '110'), @comic.album %><br>
+  <% end %>
+  <%= @comic.album.name %><br>
+</p>
