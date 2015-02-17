@@ -19,6 +19,7 @@
 
 
 
+
 /*************
 * MAIN*
 *************/
@@ -53,7 +54,7 @@ footer {
     height: 80px;
     width: 100%;
     overflow:hidden;
-}
+  }
 
 nav#menu ul{
 
@@ -65,7 +66,7 @@ nav#menu ul{
 nav#menu ul li{
   display: inline-block;
   background-color: white;
-  padding: 10px;
+  padding: 20px;
 }
 li:hover {
   opacity: 0.5;
@@ -74,9 +75,6 @@ li:hover {
 /*************
 * MENU BAR TOOL TIP *
 *************/
- #menu .home{
-
-} /*use blank png*/
 
 /* Add this attribute to the element that needs a tooltip */
 [data-tooltip] {
@@ -99,17 +97,18 @@ li:hover {
 /* Position tooltip above the element */
 [data-tooltip]:before {
   position: absolute;
-  bottom: 100%;
+  bottom: 200%;
   left: 50%;
-  margin-left: -34px;
-  padding: 7px;
+  margin-left: -40px;
+  padding: 10px;
   width: 50px;
  
-  color: red;
+  color: black;
   content: attr(data-tooltip);
   text-align: center;
-  font-size: 100px;
-  line-height: 1.2;
+  font-size: 18px;
+  line-height: 0.2;
+  z-index: 15;
 }
 
 /* Show tooltip content on hover */

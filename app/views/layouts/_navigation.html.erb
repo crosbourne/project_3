@@ -1,21 +1,23 @@
 
 <footer >
   <nav id="menu">
-    <ul>
-     <%= link_to image_tag("home.jpg", height: '60', width: '60',  class: 'home', :'data-tooltip' => 'home' ), home_path %>
+    <ul class="clearnav">
+      <li>
+  
+     <%= link_to image_tag("home.jpg", height: '50', width: '50' ), home_path, class: 'Home', data: {tooltip: 'Home'} %>
       </li>
-      <li><%= link_to image_tag("star.jpg", height: '60', width: '60'), discover_path %>
+      <li><%= link_to image_tag("star.jpg", height: '50', width: '50'), discover_path, class: 'Discover', data: {tooltip: 'Discover'}  %>
 
       </li>
-      <li><%= link_to image_tag("spidey1.jpg", height: '60', width: '60'), browse_path %>
+      <li><%= link_to image_tag("spidey1.jpg", height: '50', width: '50'), browse_path, class: 'Browse', data: {tooltip: 'Browse'}  %>
 
       </li>
       <% if current_user %>
-        <li><%= link_to image_tag("log_out.jpg", height: '60', width: '60'), user_path(current_user) %>
+        <li><%= link_to image_tag("log_out.jpg", height: '50', width: '50'), user_path(current_user), class: 'Log_out', data: {tooltip: 'Log_out'}  %>
 
         </li>
       <% else %>
-        <li><%= link_to image_tag("log_in.jpg", height: '60', width: '60'), new_user_session_path %></li>
+        <li><%= link_to image_tag("log_in.jpg", height: '50', width: '50'), new_user_session_path, class: 'Log_in', data: {tooltip: 'Log_in'}  %></li>
        
       <% end %>
     </ul>
