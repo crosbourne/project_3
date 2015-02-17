@@ -12,12 +12,19 @@
   <a href><%#= link_to "Character", character_path,  class: "slide_page" %></a>
 
 
-<nav>
-  <ul>
-    <li><%= link_to 'Issue', issue_path %></li>
-    <li><%= link_to 'Character', character_path %></li>
-    <li><%= link_to 'movie', movie_path %></li>
-    <li><%= link_to 'volume', volume_path %></li>
+<nav id="menu">
+  <ul class="clearnav">
+    <li>
+   <%= link_to image_tag("superman.jpg", height: '50', width: '70' ), volume_path, class: 'Volumes', data: {tooltip: 'Volumes'} %>
+    </li>
+    <li><%= link_to image_tag("batman.jpg", height: '50', width: '100'), movie_path, class: 'Movies', data: {tooltip: 'Movies'}  %>
+
+    </li>
+    <li><%= link_to image_tag("wonder_woman.jpg", height: '50', width: '100'), character_path, class: 'Characters', data: {tooltip: 'Characters'}  %>
+    </li>
+   
+      <li><%= link_to image_tag("thor.jpg", height: '50', width: '50'), about_path, class: 'About', data: {tooltip: 'About'}  %>
+      </li>
   </ul>
 </nav>
 
