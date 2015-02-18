@@ -1,3 +1,5 @@
+require 'uri'
+
 class PagesController < ApplicationController
   def home
     @user = User.find_by(id: params[:user_id])
@@ -34,19 +36,15 @@ class PagesController < ApplicationController
 
   def search
     if !params[:movies].nil? && !params['search'].empty?
-      @results = @movies = ComicVine::API.movies({limit: 20, filter: "name:#{params[:search]}"})
+      @results = @movies = (ComicVine::API.movies({limit: 20, filter: URI.escape("name:#{params[:search]}")}) rescue [])
    
     elsif !params[:characters].nil? && !params['search'].empty?
-      @results = @characters = ComicVine::API.characters({limit: 20, filter: "name:#{params[:search]}"})
-  
-    # elsif !params[:issues].nil? && !params['search'].empty?
-    #   @results = @issues = ComicVine::API.issues({limit: 20, 
-    #     filter: "name:#{params[:search]},description:#{params[:search]},issue_number:#{params[:search]}"})
-    #   raise
+      @results = @characters = (ComicVine::API.characters({limit: 20, filter: URI.escape("name:#{params[:search]}")})rescue [])
+      
     
     elsif !params[:volumes].nil? && !params['search'].empty?
-      @results = @volumes = ComicVine::API.volumes({limit: 20, 
-        filter: "description:#{params[:search]},deck:#{params[:search]},name:#{params[:search]}"})
+      @results = @volumes = (ComicVine::API.volumes({limit: 20, 
+        filter: URI.escape("description:#{params[:search]},deck:#{params[:search]},name:#{params[:search]}")}) rescue [])
     
     else 
       terms = [params[:movies],params[:characters],params[:issues],params[:volumes]].compact.join(",")
