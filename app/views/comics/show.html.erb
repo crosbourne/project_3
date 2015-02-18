@@ -2,32 +2,42 @@
 
 
 
+
 <div class="comic_container">
-  <div class="album_float_right">
-    <strong><%= @comic.comic_heading %></strong><br>
-    <%= @comic.description %><br>
+  <div>
+  <% if @comic.comic_image.present? %>
+  <%= image_tag(@comic.comic_image.url, height: '230', width: '165', class: "album_float_left") %><br>
+  <% else %>
+  <%= image_tag("no_comic_cover.jpg", height: '230', width: '165', class: "album_float_left") %><br>
+  <% end %>
+  <strong><%= @comic.comic_heading %></strong><br>
+  <%= @comic.description %><br>
   </div>
 
-  <div class="album_float_left">
-      <% if @comic.comic_image.present? %>
-      <%= image_tag(@comic.comic_image.url, height: '230', width: '175') %><br>
-      <% else %>
-      <%= image_tag("no_comic_cover.jpg", height: '230', width: '175') %><br>
-      <% end %>
-    </end>
+  <div class="album_float_right clearLeft">
     <strong><%= @comic.name %></strong><br>
     issue #<%= @comic.issue_number  %><br><br>
+    <br>
+    <br>
   </div>
 </div>
+</end>
 
 
+<div class="comic_container">
 <% if @comic.album %>
   <p>
     <% if @comic.album.album_image.present? %>
-      <%= link_to image_tag(@album.album_image.url, height: '110', width: '110'), @comic.album %><br>
+      <%= link_to image_tag(@album.album_image.url, height: '110', width: '110', class: "album_float_left"), @comic.album %><br>
     <% else %>
-      <%= link_to image_tag("no_album_cover.jpg", height: '110', width: '110'), @comic.album %><br>
+      <%= link_to image_tag("no_album_cover.jpg", height: '110', width: '110', class: "album_float_left"), @comic.album %><br>
     <% end %>
-    <%= @comic.album.name %><br>
+
+    <div class="album_float_right clearLeft">
+    <strong><%= @comic.album.name %></strong><br>
+      <br>
+      <br>
+    </div>
   </p>
+  </div>
 <% end %>

@@ -114,8 +114,8 @@ li:hover {
 
 nav#menu1 ul{
   text-align: center;
-  margin-right: auto;
-  margin-left: auto;
+  position: fixed;
+  width: 100%;
 }
 
 nav#menu1 ul li{
