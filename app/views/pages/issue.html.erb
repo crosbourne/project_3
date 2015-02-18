@@ -3,19 +3,20 @@
 
 
 
-<%#= @issues.next_page  %>
-<%= @issues.prev_page  %>
+        <% @issues.to_a.each do |issue| %>
+            <p>
+            <div class="album_container"> 
 
-      <p>
+                <%#= issue.description.try(:html_safe) %>
+                <% if issue.image.present? %>
+                <%= image_tag(issue.image["small_url"], height: '160', width: '110', class: "album_float_left") %><br>
+                <% else %>
+                <%= image_tag("no_comic_cover.jpg", height: '160', width: '110', class: "album_float_left")  %><br>
+                <% end %>
+            </p>
 
-        <% @issues.next_page.to_a.each do |issue| %>
-        <%= issue.name %>
-        <%#= issue.description.try(:html_safe) %><br>
-        <% if issue.image.present? %>
-        <%= image_tag(issue.image["small_url"], height: '160', width: '110') %><br>
-        <% else %>
-        <%= image_tag("no_comic_cover.jpg", height: '160', width: '110')  %><br>
+                <div class="album_float_right">
+                    <strong><%= issue.name %></strong>
+                </div>
+            </div>
         <% end %>
-        Issue #<%= issue.issue_number %><br>
-        <% end %>
-        </p>

@@ -22,38 +22,34 @@
 
   <% @user.comics.each do |comic| %>
   <p>
-    <!-- <strong>Name:</strong> -->
-    <%= link_to comic.name, comic %><br>
+    <div class="album_container"> 
 
-    <% if comic.comic_image.present? %>
-    <%= link_to image_tag(comic.comic_image.url, height: '160', width: '110'), comic %><br>
-    <% else %>
-    <%= link_to image_tag("no_comic_cover.jpg", height: '160', width: '110'), comic %><br>
-    <% end %>
-    issue #<%= comic.issue_number %><br>
-
-    <%= link_to 'Edit', edit_comic_path(comic) if can? :edit, comic %>
-    <%= link_to 'Destroy', comic, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, comic)%>
+      <% if comic.comic_image.present? %>
+      <%= link_to image_tag(comic.comic_image.url, height: '160', width: '110', class: "album_float_left"), comic %><br>
+      <% else %>
+      <%= link_to image_tag("no_comic_cover.jpg", height: '160', width: '110', class: "album_float_left"), comic %><br>
+      <% end %>
   </p>
+
+    <div class="album_float_right">
+     <strong><%= comic.name %></strong><br>
+     issue #<%= comic.issue_number %><br><br>
+     <%= link_to 'Edit', edit_comic_path(comic) if can? :edit, comic %>
+     <%= link_to 'Destroy', comic, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, comic)%>
+     </div>
+    </div>
   <% end %>
 
   <% @user.albums.each do |album| %>
-    <p>
-  
+    <p> 
       <div class="album_container"> 
-
-
 
         <% if album.album_image.present? %>
         <%= link_to image_tag(album.album_image.url, height: '110', width: '110', height: '110', width: '110', class: "album_float_left"), album %><br>
         <% else %>
         <%= link_to image_tag("no_album_cover.jpg", height: '110', width: '110', class: "album_float_left"), album %><br>
-        <% end %>
-
-        
+        <% end %>    
       </p>
-
-
 
       <div class="album_float_right">
         <strong><%= album.name %></strong> <br>
@@ -61,7 +57,6 @@
         <%= link_to 'Edit', edit_album_path(album) if can? :edit, album %>
         <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, album)%>
       </div>
-
     </div>
   <% end %>
  

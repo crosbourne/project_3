@@ -2,15 +2,25 @@
 <a href="#footer"><h1>CHARACTER</h1></a>
 
 
-      <p>
+      
 
-        <% @characters.to_a.each do |character| %>
-        <%= character.name %>
-        <%#= character.description.try(:html_safe) %><br>
-        <% if character.image.present? %>
-        <%= image_tag(character.image["small_url"], height: '160', width: '110') %><br>
-        <% else %>
-        <%= image_tag("no_comic_cover.jpg", height: '160', width: '110')  %><br>
-        <% end %>
-        <% end %>
+    <% @characters.to_a.each do |character| %>
+        <p>
+        <div class="album_container"> 
+
+            <%#= character.description.try(:html_safe) %>
+            <% if character.image.present? %>
+            <%= image_tag(character.image["small_url"], height: '160', width: '110', class: "album_float_left") %><br>
+            <% else %>
+            <%= image_tag("no_comic_cover.jpg", height: '160', width: '110', class: "album_float_left")  %><br>
+            <% end %>
         </p>
+
+            <div class="album_float_right">
+                <strong><%= character.name %></strong>
+            </div>
+        </div>
+    <% end %>
+       
+
+        
