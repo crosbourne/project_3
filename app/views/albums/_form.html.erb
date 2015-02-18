@@ -1,46 +1,46 @@
 <%= form_for(@album) do |f| %>
-<% if @album.errors.any? %>
+  <% if @album.errors.any? %>
 
-<div class="module">
-<div id="error_explanation">
-  <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
+    <div class="module">
+      <div id="error_explanation">
+        <h2><%= pluralize(@album.errors.count, "error") %> prohibited this album from being saved:</h2>
 
-  <ul>
-    <% @album.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-    <% end %>
-  </ul>
-</div>
-<% end %>
-</div>
-
-<div class="module">
-  <div class="field">
-    <%= f.text_field :name, placeholder: "Name of Collection" %><br>
-  </div>
-  <%= f.text_field :heading, placeholder: "Collection Sub Heading" %><br>
-  <div class="field">
-    <%= f.text_area :description, placeholder: "Description of Collection" %>
-  </div> 
-  <div class="field">
-    <%= f.label :album_image %>
-    <%= f.file_field :album_image %><br>
-  </div>
-  <div class="field">
-    <%= f.text_field :remote_album_image_url, placeholder: "Web URL for Picture" %>
-  </div>
-</div>
-
-
-
-<% Comic.all.each do |comic| %>
-<%= check_box_tag "album[comic_ids][]", comic.id, @album.comics.include?(comic), id: "album_ids_#{comic.id}" %>
-<%= f.label :comic_ids, comic.name, for: "album_ids_#{comic.id}" %>
-<% end %><br>
-<div class="module">
-  <%= f.submit 'submit', class: 'button' %><br>
+        <ul>
+          <% @album.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
   <% end %>
-</div>
+
+  <div class="module">
+    <div class="field">
+      <%= f.text_field :name, placeholder: "Name of Collection" %><br>
+    </div>
+    <%= f.text_field :heading, placeholder: "Collection Sub Heading" %><br>
+    <div class="field">
+      <%= f.text_area :description, placeholder: "Description of Collection" %>
+    </div> 
+    <div class="field">
+      <%= f.label :album_image %>
+      <%= f.file_field :album_image %><br>
+    </div>
+    <div class="field">
+      <%= f.text_field :remote_album_image_url, placeholder: "Web URL for Picture" %>
+    </div>
+  </div>
+
+
+
+  <% Comic.all.each do |comic| %>
+    <%= check_box_tag "album[comic_ids][]", comic.id, @album.comics.include?(comic), id: "album_ids_#{comic.id}" %>
+    <%= f.label :comic_ids, comic.name, for: "album_ids_#{comic.id}" %>
+  <% end %><br>
+  <div class="module">
+    <%= f.submit 'submit', class: 'button' %><br>
+  </div>
+<% end %>
 
 
 
