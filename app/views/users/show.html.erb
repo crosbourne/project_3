@@ -40,21 +40,32 @@
   <% @user.albums.each do |album| %>
     <p>
   
-      
-      <strong><%= link_to album.name, album %></strong> <br>
-      <%= album.comics.size %> items<br>
-     
+      <div class="album_container"> 
 
-      <% if album.album_image.present? %>
-      <%= link_to image_tag(album.album_image.url, height: '110', width: '110'), album %><br>
-      <% else %>
-      <%= link_to image_tag("no_album_cover.jpg", height: '110', width: '110'), album %><br>
-      <% end %>
 
-      <%= link_to 'Edit', edit_album_path(album) if can? :edit, album %>
-      <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, album)%>
-    </p>
-    <% end %>
+
+        <% if album.album_image.present? %>
+        <%= link_to image_tag(album.album_image.url, height: '110', width: '110', height: '110', width: '110', class: "album_float_left"), album %><br>
+        <% else %>
+        <%= link_to image_tag("no_album_cover.jpg", height: '110', width: '110', class: "album_float_left"), album %><br>
+        <% end %>
+
+        
+      </p>
+
+
+
+      <div class="album_float_right">
+        <strong><%= album.name %></strong> <br>
+        <%= album.comics.size %> items<br><br>
+        <%= link_to 'Edit', edit_album_path(album) if can? :edit, album %>
+        <%= link_to 'Destroy', album, method: :delete, data: { confirm: 'Are you sure?' } if can?(:destroy, album)%>
+      </div>
+
+    </div>
+  <% end %>
+ 
+
 
 
 
