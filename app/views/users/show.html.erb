@@ -39,10 +39,11 @@
 
   <% @user.albums.each do |album| %>
     <p>
-      <!-- <strong>Name:</strong> -->
+  
+      
+      <strong><%= link_to album.name, album %></strong> <br>
       <%= album.comics.size %> items<br>
-      <%= link_to album.name, album %><br>
-      <%= link_to album.title %><br>
+     
 
       <% if album.album_image.present? %>
       <%= link_to image_tag(album.album_image.url, height: '110', width: '110'), album %><br>
