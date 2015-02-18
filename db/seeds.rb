@@ -1,6 +1,6 @@
-User.create!([
+User.new([
   {email: "admin@admin.com", password: "password", first_name: "Neil", last_name: "Crosbourne", user_avatar: nil, role: "admin"}
-])
+]).save(validate: false)
 Album.create!([
   {name: "JUSTICE LEAGUE MUST-READS", description: "Superman, Batman, Wonder Woman, Flash, Green Lantern. The dream team.", album_image: nil, user_id: 1, heading: "DC'S MOST ICONIC HEROES TOGETHER"},
   {name: "SUPERMAN MUST-READS", description: "Sent to Earth as a baby, Superman is the most powerful being on Earth but uses his powers for good. ", album_image: nil, user_id: 1, heading: "THE START OF THE GOLDEN AGE"},
