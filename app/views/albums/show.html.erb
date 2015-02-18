@@ -26,24 +26,30 @@
 
 
 <% @album.comics.each do |comic| %>
-<div class="comic_container">
-  <div class="right">
-    <strong><%= comic.comic_heading %></strong><br>
-    <%= comic.description %><br>
-  </div>  
-  <div style="display: block; clear: both;"></div>
-
-  <div class="left">
+  <div class="comic_container">
+    <div>
     <% if comic.comic_image.present? %>
-    <%= link_to image_tag(comic.comic_image.url, height: '160', width: '105'), comic %><br>
-    <% else %>
-    <%= link_to image_tag("no_comic_cover.jpg", height: '160', width: '105'), comic %><br>
-    <% end %>
-    <strong><%= comic.name %></strong><br>
-    issue #<%= comic.issue_number  %><br>
-  <% end %>
+      <%= link_to image_tag(comic.comic_image.url, height: '160', width: '105', class: "comic_float_left"), comic %>
+      <% else %>
+      <%= link_to image_tag("no_comic_cover.jpg", height: '160', width: '105', class: "comic_float_left"), comic %>
+      <% end %>
+      <strong><%= comic.comic_heading %></strong>
+      <br>
+      <%= comic.description %>  
+    </div>
+
+    <div class="comic_float_right clearLeft">
+      <strong><%= comic.name %></strong><br>
+      issue # <%= comic.issue_number  %><br>
+      <br>
+      <br>
+    </div>
   </div>
-</div>
+<% end %>
+
+
+
+
 
 
 

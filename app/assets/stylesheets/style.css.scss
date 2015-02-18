@@ -71,7 +71,7 @@ header {
 
 footer {
     background-color: white;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     height: 80px;
@@ -80,7 +80,6 @@ footer {
   }
 
 nav#menu ul{
-
   text-align: center;
   margin-right: auto;
   margin-left: auto;
@@ -94,6 +93,25 @@ nav#menu ul li{
 li:hover {
   opacity: 0.5;
 }
+
+nav#menu1 ul{
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+nav#menu1 ul li{
+  display: inline-block;
+  padding-top: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: none;
+}
+li:hover {
+  opacity: 0.5;
+}
+
+
 
 /*************
 * MENU BAR TOOL TIP *
@@ -331,16 +349,17 @@ h1 {
 
 .album_container {
   float: left;
-  padding-left: 20px;
+  padding-left: 10px;
   margin-top: 20px;
-  width: 100%;
+  width: 50%;
 }
 
 .album_float_right {
   vertical-align: middle;
-  font-size: 20px;
-  float:right;
+  font-size: 15px;
+  float:left;
   padding-left: 20px;
+  text-align: left; 
 }
 
 /*comic picture*/
@@ -390,22 +409,24 @@ p {
   float: left;
   padding-left: 20px;
   margin-top: 20px;
+  width: 50%;
+  font-size: 20px;
 }
 
-/*comic text*/
-.right{
-  font-size: 20px;
-  padding-right: 10px;
-  float:right;
-
+.comic_float_right {
+  vertical-align: middle;
+  font-size: 10px;
+  float:left;
+  padding-left: 20px;
+  text-align: left; 
 }
 
 /*comic picture*/
-.left {
-
+.comic_float_left {
+  padding-left: 20px;
+  padding-right: 20px;
   float: left;
   text-align: center;
-
 }
 /*************
 * BROWSE BAR INPUTS*
@@ -464,8 +485,47 @@ input[type=submit]:hover {
   color: white;
 }
 
+.padding {
+  background-color: white;
+  padding:100px;
+}
+
+#scroll-up {
+  display: block;
+}
+
+.clearLeft {
+  clear:left;
+}
+
+// when the screen is big
+@media screen and (min-width: 961px) {
+
+}
+
+// when the screen is small
+@media screen and (max-width:960px) {
+
+  .album_float_right {
+    font-size: 10px;
+  }
+
+
+  .comic_float_right {
+    vertical-align: middle;
+    font-size: 10px;
+    float:left;
+    padding-left: 20px;
+    text-align: left; 
+  }
+  .comic_container {
+    float: left;
+    padding-left: 20px;
+    margin-top: 20px;
+    width: 50%;
+    font-size: 10px;
+  }
 
 
 
-
-
+}

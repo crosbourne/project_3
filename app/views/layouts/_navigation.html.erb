@@ -1,7 +1,8 @@
 
-<footer >
- <nav id="menu">
-    <ul class="clearnav">
+
+  <nav id="menu">
+    
+      <ul class="clearnav">
       <li>
      <%= link_to image_tag("home.jpg", height: '50', width: '50' ), home_path, class: 'Home', data: {tooltip: 'Home'} %>
       </li>
@@ -19,6 +20,7 @@
         <li><%= link_to image_tag("log_in.jpg", height: '50', width: '50'), new_user_session_path, class: 'Log_in', data: {tooltip: 'Log_in'}  %></li>
        
       <% end %>
+      <li><a id="scroll-up" href="#up">go to top</a></li>
     </ul>
+  
   </nav>
-</footer>
