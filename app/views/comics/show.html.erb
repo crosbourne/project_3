@@ -29,7 +29,7 @@
 <% if @comic.album %>
   <p>
     <% if @comic.album.album_image.present? %>
-      <%#= link_to image_tag(@album.album_cover.url, height: '110', width: '110', class: "album_float_left"), @comic.album %><br>
+      <%= link_to image_tag(@comic.album.album_image, height: '110', width: '110', class: "album_float_left"), @comic.album %><br>
     <% else %>
       <%= link_to image_tag("no_album_cover.jpg", height: '110', width: '110', class: "album_float_left"), @comic.album %><br>
     <% end %>
