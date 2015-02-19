@@ -7,7 +7,7 @@
 <% @albums.each do |album| %>
   <div class="album_container">  
     <% if album.album_image.present? %>
-    <%= link_to image_tag(album.album_image.url, height: '110', width: '110', class: "album_float_left"), album %><br>
+    <%= link_to image_tag(album.album_cover.url, height: '110', width: '110', class: "album_float_left"), album %><br>
     <% else %>
     <%= link_to image_tag("no_album_cover.jpg", height: '110', width: '110', class: "album_float_left"), album %><br>
     <% end %>
