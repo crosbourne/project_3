@@ -4,7 +4,7 @@
 
 <p>
   <% if @album.album_image.present? %>
-  <%= image_tag(@album.album_image.url, height: '400', width: '1000', class: "album_splash") %>
+  <%= image_tag(@album.album_image.url, height: '300', width: '1000', class: "album_splash") %>
   <% else %>
   <%= image_tag("no_album_splash.jpg", height: '300', width: '1000', class: "album_splash") %>
   <% end %>

@@ -8,9 +8,6 @@
 </form></h1></a>
 
 
-<!--  <div class="container1"> -->
-  <a href><%#= link_to "Character", character_path,  class: "slide_page" %></a>
-
 
 <nav id="menu1">
   <ul class="clearnav">
@@ -31,22 +28,22 @@
 
 
 <% if @results %>
-<% @results.each do |result| %>
-<p>
-  <%= result.name %>
+  <% @results.to_a.each do |result| %>
+    <p>
+    <div class="album_container"> 
 
-  <%#= result.description.try(:html_safe) %><br>
-  <% if result.image.present? %>
-  <%= image_tag(result.image["small_url"], height: '160', width: '110')  %><br>
-  <% else %>
-  <%= image_tag("no_comic_cover.jpg", height: '160', width: '110')   %><br>
+        <%#= result.description.try(:html_safe) %>
+        <% if result.image.present? %>
+        <%= image_tag(result.image["small_url"], height: '160', width: '110', class: "album_float_left") %><br>
+        <% else %>
+        <%= image_tag("no_comic_cover.jpg", height: '160', width: '110', class: "album_float_left")  %><br>
+        <% end %>
+    </p>
+
+        <div class="album_float_right">
+            <strong><%= result.name %></strong>
+        </div>
+    </div>
   <% end %>
-  <!-- issue # --> <%#= result.first_appeared_in_issue.try :issue_number %><br>
-</p>
 <% end %>
-<% end %>
-
-
-</div>
-
 
