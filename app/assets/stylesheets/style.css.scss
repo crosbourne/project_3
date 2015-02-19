@@ -129,6 +129,14 @@ li:hover {
   opacity: 0.5;
 }
 
+a#scroll-up {
+  position: absolute;
+  z-index: 100;
+  height: 100px;
+  top: 500px
+}
+
+
 
 
 /*************
@@ -516,6 +524,69 @@ input[type=submit]:hover {
   clear:left;
 }
 
+/*************
+* ABOUT PAGE *
+*************/
+
+/* Mise en place des différentes parties / slides */
+#slide1, #slide2, #slide3 {
+  height: 1000px;
+  padding-top:100px;
+}
+
+#slide1 {
+  background: url('/assets/slide1.jpg' ) no-repeat center fixed; 
+
+ -webkit-background-size: cover; 
+    
+  }
+
+
+#slide2 {
+ background: url('/assets/slide2.jpg') no-repeat center fixed;  
+ -webkit-background-size: cover;
+}
+
+#slide3 {
+  background: url('/assets/slide3.jpg') no-repeat center fixed;
+  -webkit-background-size: cover;
+}
+
+
+span {
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Gestion du contenu */
+.slide_inside {
+  width: 300px;
+  margin: 0 auto;
+}
+
+#slide1  .slide_inside {
+  text-align:center;
+  color: white;
+}
+
+#slide2 .slide_inside  {
+  width: 700px;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align:justify;
+  padding:20px;
+  color: white;
+
+}
+
+#slide3 .slide_inside {
+  width: 700px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding:20px;
+  color: white;
+}
+
 // when the screen is big
 @media screen and (min-width: 961px) {
 
@@ -553,4 +624,18 @@ input[type=submit]:hover {
     font-size: 20px;
   }
 
+  #slide2 .slide_inside  {
+  width: 200px;
+   
+
+  }
+
+  #slide3 .slide_inside {
+    width: 200px;
+    text-align: justify;
+ 
+  }
+
 }
+
+

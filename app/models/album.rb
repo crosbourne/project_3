@@ -5,7 +5,7 @@ class Album < ActiveRecord::Base
 
 
   mount_uploader :album_image, AlbumImageUploader
-  mount_uploader :album_cover, AlbumImageUploader
+  mount_uploader :album_cover, AlbumCoverUploader
 
 
 
