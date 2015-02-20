@@ -3,7 +3,7 @@ class Comic < ActiveRecord::Base
  
 
     mount_uploader :comic_image, ComicImageUploader
-    mount_uploader :album_cover, AlbumCoverUploader
+    
 
 
 
