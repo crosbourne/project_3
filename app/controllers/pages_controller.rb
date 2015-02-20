@@ -51,9 +51,15 @@ class PagesController < ApplicationController
 
       @results = @volumes = (ComicVine::API.volumes({limit: 20, 
         filter: URI.escape("description:#{params[:search]},deck:#{params[:search]},name:#{params[:search]}")}) rescue [])
+
+    elsif !params[:issues].nil? && !params['search'].empty?
+      
+
+        @results = @issues = (ComicVine::API.issues({limit: 20, 
+          filter: URI.escape("description:#{params[:search]},deck:#{params[:search]},name:#{params[:search]}")}) rescue [])
     
     else 
-      terms = [params[:movies],params[:characters],params[:volumes]].compact.join(",")
+      terms = [params[:movies],params[:characters],params[:issues],params[:volumes]].compact.join(",")
       if terms.present? && params[:search].present?
         @results = ComicVine::API.search terms, params['search'], {:limit => 40}
       end

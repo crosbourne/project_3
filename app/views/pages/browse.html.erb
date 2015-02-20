@@ -1,29 +1,13 @@
 
 <a href="#footer"><h1><form action="/search" method="get">
-  <input name="search" type="search" placeholder="Search" > 
-  <input name="volumes" type="checkbox" value="volumes" class="Volumes"data-tooltipa="Volumes"> 
+  <input name="search" type="search" placeholder="Search"  > 
+  <input name="volumes" type="checkbox" value="volumes" class="Volumes"data-tooltipa="Volumes" checked> 
   <input name="movies" type="checkbox" value="movies" class="Movies"data-tooltipa="Movies">
+  <input name="issues" type="checkbox" value="issues" class="Issues"data-tooltipa="Issues">
   <input name="characters" type="checkbox" value="characters" class="Characters"data-tooltipa="Characters"> 
   <input value="Search" type="submit">
 </form></h1></a>
 
-
-
-<nav id="menu1">
-  <ul class="clearnav">
-    <li>
-   <%= link_to image_tag("superman.jpg", height: '50', width: '70' ), volume_path, class: 'Volumes', data: {tooltip: 'Volumes'} %>
-    </li>
-    <li><%= link_to image_tag("batman.jpg", height: '50', width: '100'), movie_path, class: 'Movies', data: {tooltip: 'Movies'}  %>
-
-    </li>
-    <li><%= link_to image_tag("wonder_woman.jpg", height: '50', width: '100'), character_path, class: 'Characters', data: {tooltip: 'Characters'}  %>
-    </li>
-   
-      <li><%= link_to image_tag("thor.jpg", height: '50', width: '50'), about_path, class: 'About', data: {tooltip: 'About'}  %>
-      </li>
-  </ul>
-</nav>
 
 
 
@@ -45,5 +29,8 @@
         </div>
     </div>
   <% end %>
+<% else  %>
+
+<h2>NOT FOUND</h2>
 <% end %>
 
