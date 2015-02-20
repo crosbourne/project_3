@@ -18,22 +18,6 @@ class PagesController < ApplicationController
   
   end
 
-  def volume
-    @volumes = ComicVine::API.volumes({limit: 20})
-  end
-
-  def character
-    @characters = ComicVine::API.characters({limit: 20})
-  end
-
-  def issue
-    @issues = ComicVine::API.issues({limit: 20})
-  end
-
-  def movie
-    @movies = ComicVine::API.movies({limit: 50, offset: 10})
-  end
-
   def search
     if !params[:movies].nil? && !params['search'].empty?
       

@@ -4,22 +4,22 @@
     
       <ul class="clearnav">
       <li>
-     <%= link_to image_tag("home.jpg", height: '50', width: '50' ), home_path, class: 'Home', data: {tooltip: 'Home'} %>
+     <%= link_to image_tag("home.jpg", height: '45', width: '45' ), home_path, class: 'Home', data: {tooltip: 'Home'} %>
       </li>
-      <li><%= link_to image_tag("thor.jpg", height: '50', width: '50'), about_path, class: 'About', data: {tooltip: 'About'}  %>
+      <li><%= link_to image_tag("thor.jpg", height: '45', width: '45'), about_path, class: 'About', data: {tooltip: 'About'}  %>
       </li>
-      <li><%= link_to image_tag("star.jpg", height: '50', width: '50'), discover_path, class: 'Discover', data: {tooltip: 'Discover'}  %>
+      <li><%= link_to image_tag("star.jpg", height: '45', width: '45'), discover_path, class: 'Discover', data: {tooltip: 'Discover'}  %>
 
       </li>
-      <li><%= link_to image_tag("spidey1.jpg", height: '50', width: '50'), browse_path, class: 'Browse', data: {tooltip: 'Browse'}  %>
+      <li><%= link_to image_tag("spidey1.jpg", height: '45', width: '45'), browse_path, class: 'Browse', data: {tooltip: 'Browse'}  %>
 
       </li>
       <% if current_user %>
-        <li><%= link_to image_tag("log_out.jpg", height: '50', width: '50'), user_path(current_user), class: 'Profile', data: {tooltip: 'Profile'}  %>
+        <li><%= link_to image_tag("log_out.jpg", height: '45', width: '45'), user_path(current_user), class: 'Profile', data: {tooltip: 'Profile'}  %>
 
         </li>
       <% else %>
-        <li><%= link_to image_tag("log_in.jpg", height: '50', width: '50'), new_user_session_path, class: 'Log_in', data: {tooltip: 'Log_in'}  %></li>
+        <li><%= link_to image_tag("log_in.jpg", height: '45', width: '45'), new_user_session_path, class: 'Log_in', data: {tooltip: 'Log_in'}  %></li>
        
       <% end %>
     </ul>
