@@ -22,24 +22,24 @@ class PagesController < ApplicationController
     if !params[:movies].nil? && !params['search'].empty?
       
 
-      @results = @movies = (ComicVine::API.movies({limit: 20, filter: URI.escape("name:#{params[:search]}")}) rescue [])
+      @results = @movies = (ComicVine::API.movies({limit: 40, filter: URI.escape("name:#{params[:search]}")}) rescue [])
    
     elsif !params[:characters].nil? && !params['search'].empty?
       
 
-      @results = @characters = (ComicVine::API.characters({limit: 20, filter: URI.escape("name:#{params[:search]}")})rescue [])
+      @results = @characters = (ComicVine::API.characters({limit: 40, filter: URI.escape("name:#{params[:search]}")})rescue [])
       
     
     elsif !params[:volumes].nil? && !params['search'].empty?
   
 
-      @results = @volumes = (ComicVine::API.volumes({limit: 20, 
+      @results = @volumes = (ComicVine::API.volumes({limit: 40, 
         filter: URI.escape("description:#{params[:search]},deck:#{params[:search]},name:#{params[:search]}")}) rescue [])
 
     elsif !params[:issues].nil? && !params['search'].empty?
       
 
-        @results = @issues = (ComicVine::API.issues({limit: 20, 
+        @results = @issues = (ComicVine::API.issues({limit: 40, 
           filter: URI.escape("description:#{params[:search]},deck:#{params[:search]},name:#{params[:search]}")}) rescue [])
     
     else 
