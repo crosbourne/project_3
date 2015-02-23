@@ -5,6 +5,7 @@ gem 'cancancan'
 gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'carrierwave', '0.9.0'
+gem 'fog', '~> 1.3.1'
 gem 'rmagick'
 gem 'comic_vine'
 gem 'rails_12factor', group: :production
