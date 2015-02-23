@@ -28,7 +28,6 @@ Album.create!([
   {name: "THOR MUST-READS", description: "Witness Thor's Journey from becoming Asgard's favourite son to one of Earth's mightiest protectors. Read these greatest moments in Thor's longest running series.", album_image: "thor_splash.jpg", user_id: 1, heading: "THE GREATEST STORIES FROM THOR'S FIRST ONGOING SERIES", album_cover: "thor_album.jpg"}
 ])
 Comic.create!([
-  {name: "Firestorm ", description: "Firestorm The Nuclear Man was published from 1982-1990 comprising a total of one-hundred issues and five Annuals.", comic_image: nil, user_id: 1, album_id: nil, issue_number: 1, comic_heading: "The Fury of Firestorm", bubble_name: "Firestorm", bubble_number: 42},
   {name: "Watchmen", description: "Featuring the first appearance of Rorschach, Ozymandias, Dr. Manhattan, Silk Spectre, Nite Owl, and the Comedian! ", comic_image: nil, user_id: 1, album_id: 4, issue_number: 1, comic_heading: "Game changing comic", bubble_name: "Watchmen", bubble_number: 42},
   {name: "Deadshot", description: "Deadshot is one of the world's finest assassins, well-known for his expert shot Marksmanship, and near perfect track record. He's only missed once while trying to shoot Batman. ", comic_image: nil, user_id: 1, album_id: 10, issue_number: 1, comic_heading: "Introducing Deadshot", bubble_name: "Deadshot", bubble_number: 40},
   {name: "Aquaman", description: "Anyone that ever hesitated to read a story about 'the guy who talks to fish, ' should have no second thoughts about picking up \"Aquaman Volume 1", comic_image: nil, user_id: 1, album_id: 9, issue_number: 1, comic_heading: "Aquaman in the New 52", bubble_name: "Aquaman", bubble_number: 46},
@@ -108,5 +107,6 @@ Comic.create!([
   {name: "Green Lantern", description: "The storyline follows the \"rebirth\" of Hal Jordan as he overcomes fear itself in the form of the cosmic entity Parallax. The series starred various members of the intergalactic police force known as the Green Lantern Corps.", comic_image: nil, user_id: 1, album_id: 9, issue_number: 1, comic_heading: "Hal Jordan redemption", bubble_name: "Green Lantern", bubble_number: 134},
   {name: "blag", description: "pepowevv", comic_image: nil, user_id: 4, album_id: nil, issue_number: 140, comic_heading: "vvpkwegvowj", bubble_name: "blah blah", bubble_number: 40},
   {name: "doggy", description: "iermvm", comic_image: nil, user_id: 2, album_id: nil, issue_number: 122, comic_heading: "ckemkvm", bubble_name: "doggy", bubble_number: 34},
-  {name: "frvrb", description: "", comic_image: "thor_album.jpg", user_id: 1, album_id: nil, issue_number: nil, comic_heading: "", bubble_name: "", bubble_number: nil}
+  {name: "frvrb", description: "", comic_image: "thor_album.jpg", user_id: 1, album_id: nil, issue_number: nil, comic_heading: "", bubble_name: "", bubble_number: nil},
+  {name: "Firestorm ", description: "Firestorm The Nuclear Man was published from 1982-1990 comprising a total of one-hundred issues and five Annuals.", comic_image: "thor_album.jpg", user_id: 1, album_id: nil, issue_number: 1, comic_heading: "The Fury of Firestorm", bubble_name: "Firestorm", bubble_number: 42}
 ])
