@@ -1,17 +1,8 @@
-User.delete_all
-Album.delete_all
-Comic.delete_all
-
-sam = User.create!([ 
-  {email: "sam@sam.com", password: "password",  first_name: "Sam", last_name: "T", user_avatar: nil, provider: nil, uid: nil, id: 2, role: "user"} ])
-
-admin = User.create!([ 
-  {email: "admin@neil.com", password: "password", first_name: "Admin", last_name: "", user_avatar: nil, provider: nil, uid: nil, id: 4, role: "admin"} ])
-
-
-  neil = User.create!([ 
-    {email: "neil@neil.com", password: "password", first_name: "Neil", last_name: "Crosbourne", user_avatar: nil, provider: nil, uid: nil, id: 1, role: "user"} ])
-
+User.create!([
+  {email: "sam@sam.com", encrypted_password: "$2a$10$i3j./GlDFFdZMtEPvRWAz.6d0opB1IT4sMptacbnHzzDjKCvdSeMy", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, first_name: "Sam", last_name: "T", user_avatar: nil, provider: nil, uid: nil, role: "user"},
+  {email: "admin@neil.com", encrypted_password: "$2a$10$nQjf5Uzn/XW1MVfeos5EZuKFzVPaY/Ba/y8eqEr982c.NYIU96ESa", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 0, current_sign_in_at: nil, last_sign_in_at: nil, current_sign_in_ip: nil, last_sign_in_ip: nil, first_name: "Admin", last_name: "", user_avatar: nil, provider: nil, uid: nil, role: "admin"},
+  {email: "neil@neil.com", encrypted_password: "$2a$10$4YqkCNMXzS9al9Pw4E2UxuFu.PEKjnM901zbFDidKqAynEOgDcsWS", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-02-23 20:35:24", last_sign_in_at: "2015-02-23 20:35:24", current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", first_name: "Neil", last_name: "Crosbourne", user_avatar: nil, provider: nil, uid: nil, role: "user"}
+])
 Album.create!([
   {name: "WATCHMEN MUST-READS", description: "Watchmen has received critical acclaim both in the comics and mainstream press, and is frequently considered by several critics and reviewers as one of the most significant works of 20th century literature. ", album_image: nil, user_id: 1, heading: "KEY MOMENTS IN THE 12 ISSUE SERIES", album_cover: nil},
   {name: "SUPERMAN MUST-READS", description: "Sent to Earth as a baby, Superman is the most powerful being on Earth but uses his powers for good. ", album_image: nil, user_id: 1, heading: "THE START OF THE GOLDEN AGE", album_cover: nil},
@@ -28,8 +19,7 @@ Album.create!([
   {name: "THOR MUST-READS", description: "Witness Thor's Journey from becoming Asgard's favourite son to one of Earth's mightiest protectors. Read these greatest moments in Thor's longest running series.", album_image: "thor_splash.jpg", user_id: 1, heading: "THE GREATEST STORIES FROM THOR'S FIRST ONGOING SERIES", album_cover: "thor_album.jpg"}
 ])
 Comic.create!([
-  {name: "Watchmen", description: "Featuring the first appearance of Rorschach, Ozymandias, Dr. Manhattan, Silk Spectre, Nite Owl, and the Comedian! ", comic_image: nil, user_id: 1, album_id: 4, issue_number: 1, comic_heading: "Game changing comic", bubble_name: "Watchmen", bubble_number: 42},
-  {name: "Deadshot", description: "Deadshot is one of the world's finest assassins, well-known for his expert shot Marksmanship, and near perfect track record. He's only missed once while trying to shoot Batman. ", comic_image: nil, user_id: 1, album_id: 10, issue_number: 1, comic_heading: "Introducing Deadshot", bubble_name: "Deadshot", bubble_number: 40},
+  {name: "Deadshot", description: "Deadshot is one of the world's finest assassins, well-known for his expert shot Marksmanship, and near perfect track record. He's only missed once while trying to shoot Batman. ", comic_image: nil, user_id: 1, album_id: 10, issue_number: 1, comic_heading: "Introducing Deadshot", bubble_name: "Deadshot", bubble_number: 40, remote_comic_image_url: "http://i.huffpost.com/gen/2055658/thumbs/o-COMIC-570.jpg"},
   {name: "Aquaman", description: "Anyone that ever hesitated to read a story about 'the guy who talks to fish, ' should have no second thoughts about picking up \"Aquaman Volume 1", comic_image: nil, user_id: 1, album_id: 9, issue_number: 1, comic_heading: "Aquaman in the New 52", bubble_name: "Aquaman", bubble_number: 46},
   {name: "The Amazing Spider-Man", description: "Spider-Man is a fictional character, a comic book superhero that appears in comic books published by Marvel Comics. Created by writer-editor Stan Lee and writer-artist Steve Ditko.", comic_image: nil, user_id: 1, album_id: 6, issue_number: 15, comic_heading: "With Great Power...", bubble_name: "Spider-Man", bubble_number: 800},
   {name: "Thanos", description: "Thanos is contemplating what is to be done now that he has the power of god. ", comic_image: nil, user_id: 1, album_id: 7, issue_number: 1, comic_heading: "Infinity Guantlet", bubble_name: "Thanos", bubble_number: 43},
@@ -58,6 +48,7 @@ Comic.create!([
   {name: "Hercules", description: "The Incredible Hercules. The series starred the mythological superhero Hercules, his sidekick Amadeus Cho, the seventh-smartest person in the world, and half-sister Athena.", comic_image: nil, user_id: 1, album_id: nil, issue_number: 112, comic_heading: "Herc and Cho take on the world", bubble_name: "Hercules", bubble_number: 64},
   {name: "Loki", description: "Never before has the mighty Thor faced a foe as dangerous as Loki, the God of Mischief! The Thor family expands with the first appearances of Asgard and Loki.", comic_image: nil, user_id: 1, album_id: 3, issue_number: 85, comic_heading: "First Appearance", bubble_name: "Loki", bubble_number: 63},
   {name: "Odin", description: "With Thor and Odin out of the way, Surtur goes to light the sword Twilight in the Eternal Flame.", comic_image: nil, user_id: 1, album_id: 3, issue_number: 353, comic_heading: "Odin vs Surter", bubble_name: "Odin", bubble_number: 64},
+  {name: "Watchmen", description: "Featuring the first appearance of Rorschach, Ozymandias, Dr. Manhattan, Silk Spectre, Nite Owl, and the Comedian! ", comic_image: "o-COMIC-570.jpg", user_id: 1, album_id: 4, issue_number: 1, comic_heading: "Game changing comic", bubble_name: "Watchmen", bubble_number: 42},
   {name: "Mr. Fantastic", description: "A shape changing alien race with one goal, to destroy the Fantastic Four and conquer the Earth.", comic_image: nil, user_id: 1, album_id: 5, issue_number: 2, comic_heading: "Enter the Skrulls", bubble_name: "Mr. Fantasic", bubble_number: 50},
   {name: "Invisible Woman", description: "The Fantastic Four has now become world heroes! See the super family get their costumes for the first time.", comic_image: nil, user_id: 1, album_id: 5, issue_number: 3, comic_heading: "Fantastic Four suit up", bubble_name: "Invisible Woman", bubble_number: 53},
   {name: "Human Torch", description: "Fantastic Four #4: First Silver Age Appearance of the Sub-Mariner. ", comic_image: nil, user_id: 1, album_id: 5, issue_number: 4, comic_heading: "Namor attacks", bubble_name: "Human Torch", bubble_number: 72},
