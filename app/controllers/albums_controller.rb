@@ -82,7 +82,8 @@ class AlbumsController < ApplicationController
         :comic_id, 
         :user_id,
         :heading,
-        :album_cover
+        :album_cover,
+        :remote_album_cover_url
         )
     end
 end
