@@ -3,18 +3,18 @@ Album.delete_all
 Comic.delete_all
 
 sam = User.create!([ 
-  {email: "sam@sam.com", password: "password",  first_name: "Sam", last_name: "T", user_avatar: nil, provider: nil, uid: nil, role: "user"} ])
+  {email: "sam@sam.com", password: "password",  first_name: "Sam", last_name: "T", user_avatar: nil, provider: nil, uid: nil, id: 2, role: "user"} ])
 
 admin = User.create!([ 
-  {email: "admin@neil.com", password: "password", first_name: "Admin", last_name: "", user_avatar: nil, provider: nil, uid: nil, role: "admin"} ])
+  {email: "admin@neil.com", password: "password", first_name: "Admin", last_name: "", user_avatar: nil, provider: nil, uid: nil, id: 4, role: "admin"} ])
 
 
   neil = User.create!([ 
-    {email: "neil@neil.com", password: "password", first_name: "Neil", last_name: "Crosbourne", user_avatar: nil, provider: nil, uid: nil, role: "user"} ])
+    {email: "neil@neil.com", password: "password", first_name: "Neil", last_name: "Crosbourne", user_avatar: nil, provider: nil, uid: nil, id: 1, role: "user"} ])
 
 Album.create!([
   {name: "WATCHMEN MUST-READS", description: "Watchmen has received critical acclaim both in the comics and mainstream press, and is frequently considered by several critics and reviewers as one of the most significant works of 20th century literature. ", album_image: nil, remote_album_image_url: "http://i.huffpost.com/gen/2055658/thumbs/o-COMIC-570.jpg", user_id: 1, heading: "KEY MOMENTS IN THE 12 ISSUE SERIES", album_cover: nil, remote_album_cover_url: "http://www.geekculture.com/joyoftech/joyimages/1199.gif"},
-  
+
   {name: "SUPERMAN MUST-READS", description: "Sent to Earth as a baby, Superman is the most powerful being on Earth but uses his powers for good. ", album_image: nil, user_id: 1, heading: "THE START OF THE GOLDEN AGE", album_cover: nil},
   {name: "JUSTICE LEAGUE MUST-READS", description: "Superman, Batman, Wonder Woman, Flash, Green Lantern. The dream team.", album_image: nil, user_id: 1, heading: "DC'S MOST ICONIC HEROES TOGETHER", album_cover: nil},
   {name: "INCREDIBLE HULK MUST-READS", description: "Marvel's resident force of nature spent nearly 40 years rampaging his way through his very first on-going series.", album_image: nil, user_id: 1, heading: "DON'T MAKE HIM ANGRY", album_cover: nil},
