@@ -94,7 +94,7 @@ Comic.create!([
 
   {name: "Ares", description: "Arse is on a mission to reclaim his stolen son.", comic_image: nil, user_id: 1, album_id: nil, issue_number: 1, comic_heading: "Ares wants his son back", bubble_name: "Ares", bubble_number: 63, remote_comic_image_url: "http://www.gwthomas.org/ares1.jpg"},
 
- {name: "Hercules", description: "The Incredible Hercules. The series starred the mythological superhero Hercules, his sidekick Amadeus Cho, the seventh-smartest person in the world, and half-sister Athena.", comic_image: nil, user_id: 1, album_id: nil, issue_number: 112, comic_heading: "Herc and Cho take on the world", bubble_name: "Hercules", bubble_number: 64, remote_comic_image_url: "http://3.bp.blogspot.com/_HDLEycm-LIE/R2v-gZgIHiI/AAAAAAAAE94/X-_qJA-53Pk/s1600-h/hulk.jpg"},
+ {name: "Hercules", description: "The Incredible Hercules. The series starred the mythological superhero Hercules, his sidekick Amadeus Cho, the seventh-smartest person in the world, and half-sister Athena.", comic_image: nil, user_id: 1, album_id: nil, issue_number: 112, comic_heading: "Herc and Cho take on the world", bubble_name: "Hercules", bubble_number: 64, remote_comic_image_url: "http://img2.wikia.nocookie.net/__cb20090224200000/mightythor/images/0/0a/Comic-incredibleherculesv1-112.jpg"},
 
  
 ])
