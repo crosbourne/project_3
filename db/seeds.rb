@@ -120,5 +120,5 @@ Comic.create!([
 
  {name: "Mystique", description: "Days of Future Past is a storyline in the Marvel Comics comic book The Uncanny X-Men issues #141-142, published in 1981. ", comic_image: nil, user_id: 1, album_id: 10, issue_number: 142, comic_heading: "Days of Future Past", bubble_name: "Mystique", bubble_number: 63, remote_comic_image_url: "http://seveninchesofyourtime.com/wp-content/uploads/2014/05/x-men-142.jpg"},
 
- {name: "Magneto", description: "Once the deadliest, most feared mutant mastermind on the planet, MAGNETO is no longer the man he once was.", comic_image: nil, user_id: 1, album_id: 10, issue_number: 1, comic_heading: "Magneto is on the hunt", bubble_name: "Magneto", bubble_number: 62, remote_comic_image_url: "htt
+ {name: "Magneto", description: "Once the deadliest, most feared mutant mastermind on the planet, MAGNETO is no longer the man he once was.", comic_image: nil, user_id: 1, album_id: 10, issue_number: 1, comic_heading: "Magneto is on the hunt", bubble_name: "Magneto", bubble_number: 62, remote_comic_image_url: "http://img2.wikia.nocookie.net/__cb20091219024654/marveldatabase/images/3/33/X-Men_Vol_2_1_Magneto_Variant.jpg"},
 ])
