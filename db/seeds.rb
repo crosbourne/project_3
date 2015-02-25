@@ -96,5 +96,5 @@ Comic.create!([
 
  {name: "Hercules", description: "The Incredible Hercules. The series starred the mythological superhero Hercules, his sidekick Amadeus Cho, the seventh-smartest person in the world, and half-sister Athena.", comic_image: nil, user_id: 1, album_id: nil, issue_number: 112, comic_heading: "Herc and Cho take on the world", bubble_name: "Hercules", bubble_number: 64, remote_comic_image_url: "http://3.bp.blogspot.com/_HDLEycm-LIE/R2v-gZgIHiI/AAAAAAAAE94/X-_qJA-53Pk/s1600-h/hulk.jpg"},
 
- {name: "Loki", description: "Never before has the mighty Thor faced a foe as dangerous as Loki, the God of Mischief! The Thor family expands with the first appearances of Asgard and Loki.", comic_image: nil, user_id: 1, album_id: 11, issue_number: 85, comic_heading: "First Appearance", bubble_name: "Loki", bubble_number: 63, remote_comic_image_url: "http://img1.wikia.nocookie.net/__cb20070331163338/marveldatabase/images/6/67/Journey_into_Mystery_Vol_1_85.jpg"},
+ 
 ])
