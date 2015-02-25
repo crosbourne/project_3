@@ -184,5 +184,25 @@ Comic.create!([
 
  {name: "Black Panther", description: "The Black Panther (T'Challa) is a fictional character, a superhero that appears in publications by Marvel Comics. He first appeared in Fantastic Four #52 (July 1966). ", comic_image: nil, user_id: 1, album_id: 9, issue_number: 52, comic_heading: "First Appearance", bubble_name: "Black Panther", bubble_number: 71, remote_comic_image_url: "http://static.comicvine.com/uploads/scale_small/0/4/7851-2045-8666-1-fantastic-four.jpg"},
 
+ {name: "Wonder Woman", description: "Wonder Woman. The character is a warrior princess of the Amazons (based on the Amazons of Greek mythology) and is known in her homeland as Princess Diana of Themyscira", comic_image: nil, user_id: 1, album_id: 3, issue_number: 1, comic_heading: "First Appearance", bubble_name: "Wonder Woman", bubble_number: 238, remote_comic_image_url: "http://3.bp.blogspot.com/-pm-4TT9j8ig/TinNhtqx8oI/AAAAAAAABDw/Ee5SDUIRYcA/s1600/01.jpg"},
+
+ {name: "The Thing", description: "The story begins with The Thing wandering around town in the rain . He is depressed over his appearance and decides to take a walk.", comic_image: nil, user_id: 1, album_id: 9, issue_number: 51, comic_heading: "This Man, this monster", bubble_name: "The Thing", bubble_number: 80, remote_comic_image_url: "http://ctrla.lt/comiclash/images/Fantastic-Four_051_Vol1961_Marvel__ComiClash.jpg"},
+
+ {name: "Fantastic Four", description: "The Fantastic Four spring to action as a team for the first time. As they learn how to control their new found powers, will it be enough to stop the fury of the Mole Man.", comic_image: nil, user_id: 1, album_id: 9, issue_number: 1, comic_heading: "Introducing The Fantastic Four", bubble_name: "Fantastic Four", bubble_number: 190, remote_comic_image_url: "http://static.comicvine.com/uploads/scale_large/10/108995/3593384-ff+001_cf_bk_hk++b6.jpg"},
+
+ {name: "Juggernaut", description: "The Juggernaut! Spider-Man pushed to his limits.", comic_image: nil, user_id: 1, album_id: 6, issue_number: 229, comic_heading: "Nothing can stop...", bubble_name: "Juggernaut", bubble_number: 60, remote_comic_image_url: "http://3.bp.blogspot.com/-HOrBmdOXwEg/U27xqw8Kb5I/AAAAAAAACpw/x7cbdRVpSYI/s1600/ASM229A.png"},
+
+ {name: "Green Goblin", description: "There is a new costumed villain in town, the Green Goblin. Spider-Man's number one bad guy.", comic_image: nil, user_id: 1, album_id: 6, issue_number: 14, comic_heading: "First Appearance", bubble_name: "Green Goblin ", bubble_number: 65, remote_comic_image_url: "http://www.spiderfan.org/comics/images/spiderman_amazing/014.jpg"},
+
+ {name: "Doctor Octopus", description: "Doctor Octopus was ranked as IGN's 28th Greatest Comic Book Villain of All Time.", comic_image: nil, user_id: 1, album_id: 6, issue_number: 3, comic_heading: "First Appearance", bubble_name: "Dr. Octopus ", bubble_number: 66, remote_comic_image_url: "http://1.bp.blogspot.com/--3HOhPkTbmY/TfKCkCdpaoI/AAAAAAAAAEk/3RE31ZEhid8/s1600/sm03-00fc.jpg"},
+
+ {name: "Green Lantern", description: "The storyline follows the rebirth of Hal Jordan as he overcomes fear itself in the form of the cosmic entity Parallax. The series starred various members of the intergalactic police force known as the Green Lantern Corps.", comic_image: nil, user_id: 1, album_id: 3, issue_number: 1, comic_heading: "Hal Jordan redemption", bubble_name: "Green Lantern", bubble_number: 134, remote_comic_image_url: "http://www.areacomic.com/000-Green_Lantern_Rebirth_001_Rembrandt-DCP.jpg"},
+
+ {name: "blag", description: "pepowevv", comic_image: nil, user_id: 4, album_id: nil, issue_number: 140, comic_heading: "vvpkwegvowj", bubble_name: "blah blah", bubble_number: 40},
+
+ {name: "doggy", description: "iermvm", comic_image: nil, user_id: 2, album_id: nil, issue_number: 122, comic_heading: "ckemkvm", bubble_name: "doggy", bubble_number: 34},
+
+ {name: "Firestorm ", description: "Firestorm The Nuclear Man was published from 1982-1990 comprising a total of one-hundred issues and five Annuals.", comic_image: "thor_album.jpg", user_id: 1, album_id: 3, issue_number: 1, comic_heading: "The Fury of Firestorm", bubble_name: "Firestorm", bubble_number: 42, remote_comic_image_url: "http://2.bp.blogspot.com/-oGOr4NTXqaQ/T8wtSvbEkNI/AAAAAAAAApE/YjnZBdtwLK0/s1600/01-01.jpg"}
+
 
 ])
