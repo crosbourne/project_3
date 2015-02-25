@@ -174,15 +174,5 @@ Comic.create!([
 
  {name: "Beast", description: "Beast enters, finds Alison lying in an uncontrollable cocoon of light, and wraps her in his arms. He promises her everything will be alright.", comic_image: nil, user_id: 1, album_id: 10, issue_number: 2, comic_heading: "Beast and Dazzler", bubble_name: "Beast", bubble_number: 65, remote_comic_image_url: "http://2.bp.blogspot.com/-YgxifltsaMQ/Uom7IwrrmaI/AAAAAAAADE8/0WQNSvuullE/s1600/22635-3333-25252-1-beauty-and-the-beast.jpg"},
 
- {name: "Black Bolt", description: "Origin and First Appearance, Black Bolt, Fantastic Four #45, Marvel Comics.", comic_image: nil, user_id: 1, album_id: 9, issue_number: 45, comic_heading: "Introducing The Inhumans", bubble_name: "Black Bolt", bubble_number: 71, remote_comic_image_url: "http://41.media.tumblr.com/1d8c18d095e909e848d3a19f7a2e3c9c/tumblr_mxe8qeyJdK1sa2z61o1_1280.jpg"},
-
- {name: "Superboy", description: "Prime firmly believes that becoming Superman is his calling despite the fact that he has become a psychotic and murderous villain. His overwhelming strength, speed, and ruthlessness make him one of the most dangerous foes in the DC Universe.", comic_image: nil, user_id: 1, album_id: 2, issue_number: 6, comic_heading: "Superboy Prime", bubble_name: "Superboy", bubble_number: 68, remote_comic_image_url: "http://img1.wikia.nocookie.net/__cb20070220212914/marvel_dc/images/8/8d/Infinite_Crisis_6B.jpg"},
-
- {name: "Invincible Iron Man", description: "Tony Stark suffers a severe chest injury during a kidnapping in which his captors attempt to force him to build a weapon of mass destruction. He instead creates a powered suit of armor to save his life and escape captivity. ", comic_image: nil, user_id: 1, album_id: 5, issue_number: 39, comic_heading: "Iron Man is Born", bubble_name: "Iron Man", bubble_number: 280, remote_comic_image_url: "http://more.marvel.com/static-cms/moremarvel/ironmanposter1lrg923.jpg"},
-
- {name: "Punisher", description: "The Punisher made his first appearance in The Amazing Spider-Man #129 (cover-dated Feb. 1974).", comic_image: nil, user_id: 1, album_id: 6, issue_number: 129, comic_heading: "First Appearance", bubble_name: "Punisher", bubble_number: 183, remote_comic_image_url: "http://img3.wikia.nocookie.net/__cb20141108020056/marveldatabase/images/e/e3/Amazing_Spider-Man_Vol_1_129_002.jpg"},
-
- {name: "Black Panther", description: "The Black Panther (T'Challa) is a fictional character, a superhero that appears in publications by Marvel Comics. He first appeared in Fantastic Four #52 (July 1966). ", comic_image: nil, user_id: 1, album_id: 9, issue_number: 52, comic_heading: "First Appearance", bubble_name: "Black Panther", bubble_number: 71, remote_comic_image_url: "http://bp2.blogger.com/_V-UMzuLMw6E/Rf3eaPHHLaI/AAAAAAAAAA4/Xfr9rp9Z_4w/s1600-h/Black+Panther_1.jpg"},
-
- {name: "Wonder Woman", description: "Wonder Woman. The character is a warrior princess of the Amazons (based on the Amazons of Greek mythology) and is known in her homeland as Princess Diana of Themyscira", comic_image: nil, user_id: 1, album_id: 3, issue_number: 1, comic_heading: "First Appearance", bubble_name: "Wonder Woman", bubble_number: 238, remote_comic_image_url: "http://3.bp.blogspot.com/-pm-4TT9j8ig/TinNhtqx8oI/AAAAAAAABDw/Ee5SDUIRYcA/s1600/01.jpg"},
+ 
 ])
