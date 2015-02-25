@@ -174,5 +174,7 @@ Comic.create!([
 
  {name: "Beast", description: "Beast enters, finds Alison lying in an uncontrollable cocoon of light, and wraps her in his arms. He promises her everything will be alright.", comic_image: nil, user_id: 1, album_id: 10, issue_number: 2, comic_heading: "Beast and Dazzler", bubble_name: "Beast", bubble_number: 65, remote_comic_image_url: "http://2.bp.blogspot.com/-YgxifltsaMQ/Uom7IwrrmaI/AAAAAAAADE8/0WQNSvuullE/s1600/22635-3333-25252-1-beauty-and-the-beast.jpg"},
 
- 
+ {name: "Black Bolt", description: "Origin and First Appearance, Black Bolt, Fantastic Four #45, Marvel Comics.", comic_image: nil, user_id: 1, album_id: 9, issue_number: 45, comic_heading: "Introducing The Inhumans", bubble_name: "Black Bolt", bubble_number: 71, remote_comic_image_url: "http://41.media.tumblr.com/1d8c18d095e909e848d3a19f7a2e3c9c/tumblr_mxe8qeyJdK1sa2z61o1_1280.jpg"},
+
+ {name: "Superboy", description: "Prime firmly believes that becoming Superman is his calling despite the fact that he has become a psychotic and murderous villain. His overwhelming strength, speed, and ruthlessness make him one of the most dangerous foes in the DC Universe.", comic_image: nil, user_id: 1, album_id: 2, issue_number: 6, comic_heading: "Superboy Prime", bubble_name: "Superboy", bubble_number: 68, remote_comic_image_url: "http://img1.wikia.nocookie.net/__cb20070220212914/marvel_dc/images/8/8d/Infinite_Crisis_6B.jpg"},
 ])
