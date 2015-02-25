@@ -96,5 +96,9 @@ Comic.create!([
 
  {name: "Hercules", description: "The Incredible Hercules. The series starred the mythological superhero Hercules, his sidekick Amadeus Cho, the seventh-smartest person in the world, and half-sister Athena.", comic_image: nil, user_id: 1, album_id: nil, issue_number: 112, comic_heading: "Herc and Cho take on the world", bubble_name: "Hercules", bubble_number: 64, remote_comic_image_url: "http://img2.wikia.nocookie.net/__cb20090224200000/mightythor/images/0/0a/Comic-incredibleherculesv1-112.jpg"},
 
- 
+ {name: "Loki", description: "Never before has the mighty Thor faced a foe as dangerous as Loki, the God of Mischief! The Thor family expands with the first appearances of Asgard and Loki.", comic_image: nil, user_id: 1, album_id: 11, issue_number: 85, comic_heading: "First Appearance", bubble_name: "Loki", bubble_number: 63, remote_comic_image_url: "http://img1.wikia.nocookie.net/__cb20070331163338/marveldatabase/images/6/67/Journey_into_Mystery_Vol_1_85.jpg"},
+
+ {name: "Odin", description: "With Thor and Odin out of the way, Surtur goes to light the sword Twilight in the Eternal Flame.", comic_image: nil, user_id: 1, album_id: 11, issue_number: 353, comic_heading: "Odin vs Surter", bubble_name: "Odin", bubble_number: 64, remote_comic_image_url: "http://www.mightythorlibrary.com/superhero-library/Img/Covers/TMT1/TMT1-353-m.jpg"},
+
+ {name: "Watchmen", description: "Featuring the first appearance of Rorschach, Ozymandias, Dr. Manhattan, Silk Spectre, Nite Owl, and the Comedian! ", comic_image: "o-COMIC-570.jpg", user_id: 1, album_id: 1, issue_number: 1, comic_heading: "Game changing comic", bubble_name: "Watchmen", bubble_number: 42, remote_comic_image_url: "http://static.comicvine.com/uploads/scale_large/8/80654/2184494-watchmen__1_pg_00.jpg"},
 ])
