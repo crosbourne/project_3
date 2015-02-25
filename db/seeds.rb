@@ -184,5 +184,5 @@ Comic.create!([
 
  {name: "Black Panther", description: "The Black Panther (T'Challa) is a fictional character, a superhero that appears in publications by Marvel Comics. He first appeared in Fantastic Four #52 (July 1966). ", comic_image: nil, user_id: 1, album_id: 9, issue_number: 52, comic_heading: "First Appearance", bubble_name: "Black Panther", bubble_number: 71, remote_comic_image_url: "http://bp2.blogger.com/_V-UMzuLMw6E/Rf3eaPHHLaI/AAAAAAAAAA4/Xfr9rp9Z_4w/s1600-h/Black+Panther_1.jpg"},
 
- {name: "Wonder Woman", description: "Wonder Woman. The character is a warrior princess of the Amazons (based on the Amazons of Greek mythology) and is known in her homeland as Princess Diana of Themyscira", comic_image: nil, user_id: 1, album_id: 3, issue_number: 1, comic_heading: "First Appearance", bubble_name: "Wonder Woman", bubble_number: 238, remote_comic_image_url: "http://3.bp.blogspot.com/-pm-4TT9j8ig/TinNhtqx8oI/AAAAAAAABDw/Ee5SDUIRYcA/s1600/01.jpg"},
+
 ])
