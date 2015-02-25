@@ -182,7 +182,7 @@ Comic.create!([
 
  {name: "Punisher", description: "The Punisher made his first appearance in The Amazing Spider-Man #129 (cover-dated Feb. 1974).", comic_image: nil, user_id: 1, album_id: 6, issue_number: 129, comic_heading: "First Appearance", bubble_name: "Punisher", bubble_number: 183, remote_comic_image_url: "http://img3.wikia.nocookie.net/__cb20141108020056/marveldatabase/images/e/e3/Amazing_Spider-Man_Vol_1_129_002.jpg"},
 
- {name: "Black Panther", description: "The Black Panther (T'Challa) is a fictional character, a superhero that appears in publications by Marvel Comics. He first appeared in Fantastic Four #52 (July 1966). ", comic_image: nil, user_id: 1, album_id: 9, issue_number: 52, comic_heading: "First Appearance", bubble_name: "Black Panther", bubble_number: 71, remote_comic_image_url: "http://bp2.blogger.com/_V-UMzuLMw6E/Rf3eaPHHLaI/AAAAAAAAAA4/Xfr9rp9Z_4w/s1600-h/Black+Panther_1.jpg"},
+ {name: "Black Panther", description: "The Black Panther (T'Challa) is a fictional character, a superhero that appears in publications by Marvel Comics. He first appeared in Fantastic Four #52 (July 1966). ", comic_image: nil, user_id: 1, album_id: 9, issue_number: 52, comic_heading: "First Appearance", bubble_name: "Black Panther", bubble_number: 71, remote_comic_image_url: "http://static.comicvine.com/uploads/scale_small/0/4/7851-2045-8666-1-fantastic-four.jpg"},
 
 
 ])
