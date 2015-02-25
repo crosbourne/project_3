@@ -143,4 +143,24 @@ Comic.create!([
  {name: "Ant Man", description: "Ant-Man was originally the superhero persona of Hank Pym, a brilliant scientist who invented a substance that allowed him to change his size.  Pym first appeared as Ant-Man was in Tales to Astonish #35 (Sept. 1962).", comic_image: nil, user_id: 1, album_id: 5, issue_number: 35, comic_heading: "First Appearance", bubble_name: "Ant Man", bubble_number: 73, remote_comic_image_url: "http://static.comicvine.com/uploads/scale_large/11/117763/2615124-talestoastonish035.jpg"},
 
  {name: "Dr. Doom", description: "Enter Dr. Doom, the Fantastic Four's number villain.", comic_image: nil, user_id: 1, album_id: 9, issue_number: 5, comic_heading: "First Appearance", bubble_name: "Dr. Doom", bubble_number: 85, remote_comic_image_url: "http://2.bp.blogspot.com/-awKqwBVJVg8/UWQcPOlXsDI/AAAAAAAAKic/Mg4VFz5gjAg/s1600/FF+005_cf_BK_HK.jpg"},
+
+ {name: "Banshee", description: "Banshee's vocal chords are damaged in the wake of his battle with Moses Magnum.", comic_image: nil, user_id: 1, album_id: 10, issue_number: 119, comic_heading: "Banshee saves the day", bubble_name: "Banshee", bubble_number: 78, remote_comic_image_url: "http://ctrla.lt/comiclash/images/The-X-Men_119_Vol1963_Marvel__ComiClash.jpg"},
+
+ {name: "The Batman", description: "The character was created by artist Bob Kane and writer Bill Finger, and first appeared in Detective Comics #27 (May 1939). ", comic_image: nil, user_id: 1, album_id: 7, issue_number: 27, comic_heading: "First Appearance", bubble_name: "Batman", bubble_number: 400, remote_comic_image_url: "http://in.bookmyshow.com/entertainment/wp-content/uploads/2014/10/first-appearance-of-batman.jpg"},
+
+ {name: "Professor X", description: "We take a look into the origin of Professor Charles Xavier. Starting with his childhood.", comic_image: nil, user_id: 1, album_id: 10, issue_number: 12, comic_heading: "Origin of the Professor", bubble_name: "Prof X", bubble_number: 69, remote_comic_image_url: "http://x.annihil.us/u/prod/marvel/i/mg/f/20/4baea94a7eb44/detail.jpg"},
+
+ {name: "Cyclopes", description: "It's the Shi'Ar versus the X-Men in an epic duel on the blue area of the Moon! Winner decides the fate of the Dark Phoenix! ", comic_image: nil, user_id: 1, album_id: 10, issue_number: 137, comic_heading: "Cyclopes last stand", bubble_name: "Cyclopes", bubble_number: 76, remote_comic_image_url: "http://media.comicbook.com/uploads1/2014/07/x-men-137-cover-103577.png"},
+
+ {name: "Dr. Manhatten", description: "Dr. Manhattan sits on Mars using his precognitive powers to determine when the picture he is holding will fall the surface. He spends the next several panels thinking about his past.", comic_image: nil, user_id: 1, album_id: 1, issue_number: 4, comic_heading: "Origin of Dr. Matthatten", bubble_name: "Dr. Manhatten", bubble_number: 41, remote_comic_image_url: "http://ecx.images-amazon.com/images/I/91o2F%2BN8HML._SL1500_.jpg"},
+
+ {name: "Silk Spectre", description: "The history of Silk Spectre! Dr. Manhattan and Laurie argue over the importance of life--sending Laurie down memory lane. ", comic_image: nil, user_id: 1, album_id: 1, issue_number: 9, comic_heading: "Silk Spectre learns the truth", bubble_name: "Silk Spectre", bubble_number: 40, remote_comic_image_url: "http://majorspoilers.com/wp-content/uploads/2014/12/Watchmen9Cover.jpg"},
+
+ {name: "Rorschach", description: "Rorschach is now in jail and he has to talk to an doctor to find out why is Rorschach is the way he is and why he thinks life and people are cruel.", comic_image: nil, user_id: 1, album_id: 1, issue_number: 6, comic_heading: "Rorschach unleashed", bubble_name: "Rorschach", bubble_number: 43, remote_comic_image_url: "http://comicmad.com/wp-content/gallery-bank/gallery-uploads/o_18rh9tc0v150sbt81jvj115s1s4n1b.jpg"},
+
+ {name: "Galactus", description: "As the Fantastic Four stirke at the great titan with no effect,the Watcher speaks to Galactus, making a plea to spare mankind.", comic_image: nil, user_id: 1, album_id: 9, issue_number: 49, comic_heading: "The end of the world", bubble_name: "Galactus", bubble_number: 73, remote_comic_image_url: "http://3.bp.blogspot.com/-TwZokChy2Bg/U8zFDU2M2TI/AAAAAAAARac/604lFrtRGf8/s1600/Fantastic+Four+49.jpg"},
+
+ {name: "Wolverine", description: "The first (but not the last) Hulk v Wolverine smack down.", comic_image: nil, user_id: 1, album_id: 4, issue_number: 181, comic_heading: "Wolverine vs The Hulk", bubble_name: "Wolverine", bubble_number: 190, remote_comic_image_url: "http://2.bp.blogspot.com/_Jzhg2O9xEUo/TIPYr2bZ_WI/AAAAAAAAAMU/eHlcVWLZHNc/s1600/Hulk181.jpg"},
+
+ {name: "The Flash", description: "Flash in a race to save the universe", comic_image: nil, user_id: 1, album_id: 3, issue_number: 8, comic_heading: "The final fate of Flash", bubble_name: "Flash", bubble_number: 153, remote_comic_image_url: "http://static.comicvine.com/uploads/scale_super/1/10369/666334-crisis8.jpg"},
 ])
